@@ -1,0 +1,110 @@
+{
+  "entities": {
+    "Pharmacy": {
+      "title": "Pharmacy",
+      "description": "Données d'une officine de pharmacie au Togo",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifiant unique de la pharmacie" },
+        "name": { "type": "string", "maxLength": 150 },
+        "city": { "type": "string", "maxLength": 100 },
+        "region": { "type": "string", "maxLength": 100 },
+        "address": { "type": "string", "maxLength": 250 },
+        "phone": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["OPEN", "CLOSED", "DE_GARDE"] },
+        "isGuardToday": { "type": "boolean" },
+        "latitude": { "type": "number" },
+        "longitude": { "type": "number" },
+        "lastVerified": { "type": "string", "maxLength": 150 }
+      },
+      "required": ["id", "name", "city", "region", "phone", "status"]
+    },
+    "Drug": {
+      "title": "Drug",
+      "description": "Médicament ou produit de santé référencé",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Identifiant du médicament" },
+        "name": { "type": "string", "maxLength": 150 },
+        "dci": { "type": "string", "maxLength": 150 },
+        "genericName": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "maxLength": 100 },
+        "description": { "type": "string", "maxLength": 500 }
+      },
+      "required": ["id", "name", "category"]
+    },
+    "DrugStock": {
+      "title": "DrugStock",
+      "description": "Disponibilité et tarif d'un médicament dans une officine",
+      "type": "object",
+      "properties": {
+        "pharmacyId": { "type": "string", "maxLength": 64 },
+        "drugId": { "type": "string", "maxLength": 64 },
+        "status": { "type": "string", "enum": ["AVAILABLE", "OUT_OF_STOCK", "ORDER_POSSIBLE"] },
+        "priceFcfa": { "type": "number" },
+        "lastUpdated": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["pharmacyId", "drugId", "status", "priceFcfa"]
+    },
+    "Reservation": {
+      "title": "Reservation",
+      "description": "Réservation citoyenne d'un médicament en pharmacie",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "pharmacyId": { "type": "string", "maxLength": 64 },
+        "pharmacyName": { "type": "string", "maxLength": 150 },
+        "patientName": { "type": "string", "maxLength": 100 },
+        "patientPhone": { "type": "string", "maxLength": 50 },
+        "drugName": { "type": "string", "maxLength": 150 },
+        "quantity": { "type": "number" },
+        "pickupTime": { "type": "string", "maxLength": 100 },
+        "notes": { "type": "string", "maxLength": 500 },
+        "status": { "type": "string", "enum": ["PENDING", "CONFIRMED", "CANCELLED", "COMPLETED"] },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "pharmacyId", "patientName", "patientPhone", "drugName", "quantity"]
+    },
+    "AppFeedback": {
+      "title": "AppFeedback",
+      "description": "Retour d'expérience et suggestions d'utilisateurs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 64 },
+        "category": { "type": "string", "maxLength": 50 },
+        "title": { "type": "string", "maxLength": 150 },
+        "description": { "type": "string", "maxLength": 1000 },
+        "rating": { "type": "number" },
+        "authorName": { "type": "string", "maxLength": 100 },
+        "authorRole": { "type": "string", "maxLength": 50 },
+        "deviceType": { "type": "string", "maxLength": 20 },
+        "upvotes": { "type": "number" },
+        "status": { "type": "string", "maxLength": 30 },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "title", "description", "rating"]
+    }
+  },
+  "firestore": {
+    "/pharmacies/{pharmacyId}": {
+      "schema": { "$ref": "entities/Pharmacy" },
+      "description": "Collection nationale des officines et pharmacies de garde du Togo"
+    },
+    "/drugs/{drugId}": {
+      "schema": { "$ref": "entities/Drug" },
+      "description": "Référentiel national des molécules et médicaments"
+    },
+    "/stocks/{stockId}": {
+      "schema": { "$ref": "entities/DrugStock" },
+      "description": "État des stocks en temps réel par officine"
+    },
+    "/reservations/{reservationId}": {
+      "schema": { "$ref": "entities/Reservation" },
+      "description": "Réservations de produits de santé effectuées par les patients"
+    },
+    "/app_feedbacks/{feedbackId}": {
+      "schema": { "$ref": "entities/AppFeedback" },
+      "description": "Avis, idées et retours d'expérience citoyens"
+    }
+  }
+}

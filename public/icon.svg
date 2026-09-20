@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="galenisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="50%" stop-color="#00A878"/>
+      <stop offset="100%" stop-color="#064E3B"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#galenisGrad)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="12" y="12" width="488" height="488" rx="100" fill="none" stroke="#34D399" stroke-width="4" stroke-opacity="0.3"/>
+
+  <!-- Majestic Lion Head Silhouette (Clean open space above head, no cross/plus) -->
+  <g transform="translate(100, 105) scale(9.8)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Majestic Mane -->
+    <path 
+      d="M16 2.5 C13 2.5 10 3.8 8 6 C6 5.5 4 7 3.5 9.5 C3 12 4 14.5 5 16 C3.5 18 3.5 21 5.5 23.5 C7.5 26 10.5 28 13.5 29 C15 29.5 17 29.5 18.5 29 C21.5 28 24.5 26 26.5 23.5 C28.5 21 28.5 18 27 16 C28 14.5 29 12 28.5 9.5 C28 7 26 5.5 24 6 C22 3.8 19 2.5 16 2.5 Z" 
+      fill="#FFFFFF"
+      fill-opacity="0.12"
+      stroke="#FFFFFF"
+      stroke-width="1.8"
+    />
+    <!-- Forehead & Brow lines -->
+    <path d="M11 9 C13 7.8 19 7.8 21 9" stroke="#FFFFFF" stroke-width="1.6" />
+    <path d="M16 8.5 V13.5" stroke="#FBBF24" stroke-width="1.6" />
+    <!-- Ears -->
+    <path d="M7 8 C6 6 8 4.5 10 5.5" stroke="#FFFFFF" stroke-width="1.6" />
+    <path d="M25 8 C26 6 24 4.5 22 5.5" stroke="#FFFFFF" stroke-width="1.6" />
+    <!-- Eyes -->
+    <path d="M10 13.5 Q12.5 12 13.5 13.5" stroke="#FFFFFF" stroke-width="1.8" />
+    <circle cx="12" cy="13.2" r="0.8" fill="#FBBF24" stroke="none" />
+    <path d="M22 13.5 Q19.5 12 18.5 13.5" stroke="#FFFFFF" stroke-width="1.8" />
+    <circle cx="20" cy="13.2" r="0.8" fill="#FBBF24" stroke="none" />
+    <!-- Nose & Muzzle -->
+    <path d="M14 17.5 L16 19.5 L18 17.5 Z" fill="#FBBF24" stroke="#FBBF24" stroke-width="1" />
+    <path d="M16 19.5 V23.5" stroke="#FFFFFF" stroke-width="1.6" />
+    <path d="M13 23.5 C14.5 24.5 17.5 24.5 19 23.5" stroke="#FFFFFF" stroke-width="1.6" />
+    <!-- Chin & Whiskers -->
+    <path d="M14 26.5 H18" stroke="#FFFFFF" stroke-width="1.6" />
+    <path d="M9 19 H6.5" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8" />
+    <path d="M23 19 H25.5" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8" />
+  </g>
+
+  <!-- National Togo Banner at Bottom -->
+  <g transform="translate(186, 442)">
+    <rect x="0" y="0" width="140" height="28" rx="14" fill="#064E3B" opacity="0.85"/>
+    <text x="70" y="19" text-anchor="middle" fill="#34D399" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="13" letter-spacing="2.5">TOGO • 228</text>
+  </g>
+</svg>

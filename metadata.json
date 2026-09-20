@@ -1,0 +1,6 @@
+{
+  "name": "Galenis Togo",
+  "description": "Plateforme nationale de localisation des pharmacies, pharmacies de garde et de disponibilité des médicaments en temps réel au Togo.",
+  "requestFramePermissions": ["geolocation", "camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

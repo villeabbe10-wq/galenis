@@ -1,0 +1,4360 @@
+{
+  "pharmacies": [
+    {
+      "id": "pharma-1",
+      "name": "Pharmacie Agoè Assiyéyé",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Agoè-Nyivé",
+      "address": "Face au Grand Marché d'Agoè Assiyéyé, Boulevard du 13 Janvier",
+      "lat": 6.2085,
+      "lng": 1.2135,
+      "phone": "+228 90 12 34 56",
+      "phoneSecondary": "+228 22 25 11 00",
+      "whatsapp": "22890123456",
+      "email": "contact@pharmacieagoe.tg",
+      "pharmacistInCharge": "Dr. Kossi AGBEKO",
+      "status": "DE_GARDE",
+      "is24h": true,
+      "isGuardToday": true,
+      "guardSchedule": [
+        {
+          "date": "2026-08-07",
+          "type": "24H",
+          "notes": "Garde Officielle de Nuit & Dimanche"
+        },
+        {
+          "date": "2026-08-08",
+          "type": "NUIT",
+          "notes": "Garde de Nuit 20h - 08h"
+        }
+      ],
+      "hours": {
+        "weekday": "07h00 - 22h00 (24h/24 en garde)",
+        "saturday": "07h30 - 22h00",
+        "sunday": "08h00 - 20h00 (En Garde)"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "GARDE_24H",
+        "PAIEMENT_MOBILE",
+        "LIVRAISON",
+        "TEST_RAPIDE_PALU",
+        "PRISE_TENSION"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz",
+        "Carte Bancaire"
+      ],
+      "lastVerified": "2026-08-07 (Confirmé par téléphone)",
+      "rating": 4.8,
+      "reviewCount": 42,
+      "verificationSource": "Appel direct",
+      "claimed": true
+    },
+    {
+      "id": "pharma-2",
+      "name": "Pharmacie De La Paix",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Agbalépédogan",
+      "address": "Avenue de la Chance, près du Carrefour Campus Nord",
+      "lat": 6.1842,
+      "lng": 1.2051,
+      "phone": "+228 91 88 77 66",
+      "whatsapp": "22891887766",
+      "email": "delapaix.lome@gmail.com",
+      "pharmacistInCharge": "Dr. Afi KOFFI-DOSSOU",
+      "status": "OPEN",
+      "is24h": false,
+      "isGuardToday": false,
+      "guardSchedule": [
+        {
+          "date": "2026-08-12",
+          "type": "NUIT",
+          "notes": "Prochaine garde nocturne"
+        }
+      ],
+      "hours": {
+        "weekday": "07h30 - 21h30",
+        "saturday": "08h00 - 21h00",
+        "sunday": "Fermé (sauf garde)"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1631549912265-f483a93e36e9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "PAIEMENT_MOBILE",
+        "CONSEIL_ORAL",
+        "PRISE_TENSION",
+        "TEST_GLYCEMIE"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-06 (Visite terrain)",
+      "rating": 4.6,
+      "reviewCount": 29,
+      "verificationSource": "Visite de terrain",
+      "claimed": true
+    },
+    {
+      "id": "pharma-3",
+      "name": "Pharmacie Populaire Tokoin",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Tokoin-Nifidji",
+      "address": "Face CHU Sylvanus Olympio, Boulevard Léopold Sédar Senghor",
+      "lat": 6.1488,
+      "lng": 1.2188,
+      "phone": "+228 92 33 44 55",
+      "phoneSecondary": "+228 22 21 05 40",
+      "whatsapp": "22892334455",
+      "email": "tokoin@populaire.tg",
+      "pharmacistInCharge": "Dr. Edem EKLOU",
+      "status": "DE_GARDE",
+      "is24h": true,
+      "isGuardToday": true,
+      "guardSchedule": [
+        {
+          "date": "2026-08-07",
+          "type": "24H",
+          "notes": "Garde Urgence CHU"
+        }
+      ],
+      "hours": {
+        "weekday": "07h00 - 23h00 (24h/24 en garde)",
+        "saturday": "07h00 - 23h00",
+        "sunday": "07h00 - 23h00"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "GARDE_24H",
+        "LIVRAISON",
+        "PAIEMENT_MOBILE",
+        "TEST_RAPIDE_PALU",
+        "PRISE_TENSION",
+        "TEST_GLYCEMIE"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz",
+        "Carte Bancaire"
+      ],
+      "lastVerified": "2026-08-07 (Ordre des Pharmaciens)",
+      "rating": 4.9,
+      "reviewCount": 88,
+      "verificationSource": "Ordre des Pharmaciens",
+      "claimed": true
+    },
+    {
+      "id": "pharma-4",
+      "name": "Pharmacie Saint Joseph",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Bé-Gényigba",
+      "address": "Rue de l'Hôpital Bé, proche de la Laguna",
+      "lat": 6.132,
+      "lng": 1.238,
+      "phone": "+228 93 45 67 89",
+      "whatsapp": "22893456789",
+      "email": "stjoseph.be@yahoo.fr",
+      "pharmacistInCharge": "Dr. Ablavi MENSAH",
+      "status": "OPEN",
+      "is24h": false,
+      "isGuardToday": false,
+      "hours": {
+        "weekday": "07h30 - 21h00",
+        "saturday": "08h00 - 20h00",
+        "sunday": "Fermé"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "PAIEMENT_MOBILE",
+        "CONSEIL_ORAL"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-05 (Appel direct)",
+      "rating": 4.3,
+      "reviewCount": 17,
+      "verificationSource": "Appel direct",
+      "claimed": false
+    },
+    {
+      "id": "pharma-5",
+      "name": "Pharmacie Espoir Totsi",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Totsi",
+      "address": "Carrefour Totsi, à côté de la station Total",
+      "lat": 6.198,
+      "lng": 1.192,
+      "phone": "+228 90 99 88 77",
+      "whatsapp": "22890998877",
+      "email": "espoir.totsi@galenis.tg",
+      "pharmacistInCharge": "Dr. Mawuli LAWSON",
+      "status": "OPEN",
+      "is24h": false,
+      "isGuardToday": false,
+      "hours": {
+        "weekday": "07h30 - 21h30",
+        "saturday": "08h00 - 21h00",
+        "sunday": "09h00 - 15h00"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "PAIEMENT_MOBILE",
+        "LIVRAISON",
+        "TEST_RAPIDE_PALU"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-07 (Déclaration pharmacie)",
+      "rating": 4.7,
+      "reviewCount": 35,
+      "verificationSource": "Déclaration pharmacie",
+      "claimed": true
+    },
+    {
+      "id": "pharma-6",
+      "name": "Pharmacie Hedzranawoé Aéroport",
+      "region": "Maritime",
+      "city": "Lomé",
+      "quarter": "Hedzranawoé",
+      "address": "Route de l'Aéroport Gnassingbé Eyadéma, près du Marché Hedzranawoé",
+      "lat": 6.168,
+      "lng": 1.235,
+      "phone": "+228 96 11 22 33",
+      "whatsapp": "22896112233",
+      "email": "hedzranawoe@pharma.tg",
+      "pharmacistInCharge": "Dr. Komlan AKAKPO",
+      "status": "DE_GARDE",
+      "is24h": true,
+      "isGuardToday": true,
+      "guardSchedule": [
+        {
+          "date": "2026-08-07",
+          "type": "24H",
+          "notes": "Garde Zone Aéroport"
+        }
+      ],
+      "hours": {
+        "weekday": "07h30 - 22h00",
+        "saturday": "07h30 - 22h00",
+        "sunday": "24h/24 (En Garde)"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1631549912265-f483a93e36e9?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "GARDE_24H",
+        "PAIEMENT_MOBILE",
+        "LIVRAISON",
+        "PRISE_TENSION"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz",
+        "Carte Bancaire"
+      ],
+      "lastVerified": "2026-08-07 (Confirmé par téléphone)",
+      "rating": 4.5,
+      "reviewCount": 51,
+      "verificationSource": "Appel direct",
+      "claimed": true
+    },
+    {
+      "id": "pharma-7",
+      "name": "Pharmacie Principale Kara",
+      "region": "Kara",
+      "city": "Kara",
+      "quarter": "Château",
+      "address": "Avenue de la Kozah, à 200m du Grand Marché de Kara",
+      "lat": 9.5511,
+      "lng": 1.1861,
+      "phone": "+228 90 44 55 66",
+      "whatsapp": "22890445566",
+      "email": "principale.kara@galenis.tg",
+      "pharmacistInCharge": "Dr. Essowavana BATCHASSI",
+      "status": "DE_GARDE",
+      "is24h": true,
+      "isGuardToday": true,
+      "guardSchedule": [
+        {
+          "date": "2026-08-07",
+          "type": "24H",
+          "notes": "Garde Régionale Kara Central"
+        }
+      ],
+      "hours": {
+        "weekday": "07h00 - 22h00",
+        "saturday": "07h00 - 22h00",
+        "sunday": "24h/24 (En Garde)"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "GARDE_24H",
+        "PAIEMENT_MOBILE",
+        "TEST_RAPIDE_PALU",
+        "PRISE_TENSION"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-07 (Appel direct)",
+      "rating": 4.9,
+      "reviewCount": 63,
+      "verificationSource": "Appel direct",
+      "claimed": true
+    },
+    {
+      "id": "pharma-8",
+      "name": "Pharmacie Du Centre Sokodé",
+      "region": "Centrale",
+      "city": "Sokodé",
+      "quarter": "Komah",
+      "address": "Nationale N1, face à la BIA Togo Sokodé",
+      "lat": 8.9833,
+      "lng": 1.1333,
+      "phone": "+228 91 22 33 44",
+      "whatsapp": "22891223344",
+      "email": "sokode.pharmacie@gmail.com",
+      "pharmacistInCharge": "Dr. Issa OURO-AGOUDA",
+      "status": "OPEN",
+      "is24h": false,
+      "isGuardToday": false,
+      "hours": {
+        "weekday": "07h30 - 21h00",
+        "saturday": "08h00 - 20h30",
+        "sunday": "Fermé"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "PAIEMENT_MOBILE",
+        "CONSEIL_ORAL",
+        "TEST_RAPIDE_PALU"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-04 (Visite de terrain)",
+      "rating": 4.4,
+      "reviewCount": 22,
+      "verificationSource": "Visite de terrain",
+      "claimed": false
+    },
+    {
+      "id": "pharma-9",
+      "name": "Pharmacie du Grand Marché Kpalimé",
+      "region": "Plateaux",
+      "city": "Kpalimé",
+      "quarter": "Commercial",
+      "address": "Rue de la Gare, proche du Marché Central de Kpalimé",
+      "lat": 6.9031,
+      "lng": 0.6294,
+      "phone": "+228 92 11 00 99",
+      "whatsapp": "22892110099",
+      "email": "kpalime.pharma@gmail.com",
+      "pharmacistInCharge": "Dr. Yao DZIDO",
+      "status": "DE_GARDE",
+      "is24h": true,
+      "isGuardToday": true,
+      "guardSchedule": [
+        {
+          "date": "2026-08-07",
+          "type": "24H",
+          "notes": "Garde de Nuit Kpalimé"
+        }
+      ],
+      "hours": {
+        "weekday": "07h30 - 21h00 (24h/24 en garde)",
+        "saturday": "08h00 - 21h00",
+        "sunday": "En Garde 24h"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1586015555751-63bb77f4322a?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "GARDE_24H",
+        "PAIEMENT_MOBILE",
+        "TEST_RAPIDE_PALU",
+        "PRISE_TENSION"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-07 (Confirmé par téléphone)",
+      "rating": 4.8,
+      "reviewCount": 31,
+      "verificationSource": "Appel direct",
+      "claimed": true
+    },
+    {
+      "id": "pharma-10",
+      "name": "Pharmacie Les Savanes Dapaong",
+      "region": "Savanes",
+      "city": "Dapaong",
+      "quarter": "Nyalé",
+      "address": "Avenue de la Paix, à côté du CHR de Dapaong",
+      "lat": 10.8633,
+      "lng": 0.2078,
+      "phone": "+228 90 77 66 55",
+      "whatsapp": "22890776655",
+      "email": "dapaong.savanes@galenis.tg",
+      "pharmacistInCharge": "Dr. Yendoube KOMBATE",
+      "status": "OPEN",
+      "is24h": false,
+      "isGuardToday": false,
+      "hours": {
+        "weekday": "07h30 - 20h30",
+        "saturday": "08h00 - 20h00",
+        "sunday": "08h00 - 13h00"
+      },
+      "photos": [
+        "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80"
+      ],
+      "services": [
+        "PAIEMENT_MOBILE",
+        "CONSEIL_ORAL",
+        "TEST_RAPIDE_PALU"
+      ],
+      "mobilePayments": [
+        "T-Money",
+        "Flooz"
+      ],
+      "lastVerified": "2026-08-06 (Ordre des Pharmaciens)",
+      "rating": 4.6,
+      "reviewCount": 19,
+      "verificationSource": "Ordre des Pharmaciens",
+      "claimed": true
+    }
+  ],
+  "drugs": [
+    {
+      "id": "drug-1",
+      "name": "Paracétamol 500mg (Doliprane)",
+      "genericName": "Paracétamol",
+      "category": "Antalgique / Anti-pyrétique",
+      "description": "Soulagement des douleurs légères à modérées et de la fièvre.",
+      "dci": "Paracetamol"
+    },
+    {
+      "id": "drug-2",
+      "name": "Amoxicilline 500mg (Clamoxyl)",
+      "genericName": "Amoxicilline",
+      "category": "Antibiotique Penicilline",
+      "description": "Traitement des infections bactériennes à germes sensibles.",
+      "dci": "Amoxicillin"
+    },
+    {
+      "id": "drug-3",
+      "name": "Artemether + Lumefantrine 80/480mg (Coartem / Artefan)",
+      "genericName": "Artemether / Lumefantrine",
+      "category": "Antipaludéen (CTA)",
+      "description": "Traitement curatif du paludisme aigu à Plasmodium falciparum.",
+      "dci": "Artemether/Lumefantrine"
+    },
+    {
+      "id": "drug-4",
+      "name": "Ibuprofène 400mg (Advill / Spidifen)",
+      "genericName": "Ibuprofène",
+      "category": "Anti-inflammatoire non stéroïdien (AINS)",
+      "description": "Antalgique, anti-inflammatoire et antipyrétique.",
+      "dci": "Ibuprofen"
+    },
+    {
+      "id": "drug-5",
+      "name": "Phloroglucinol 80mg (Spasfon)",
+      "genericName": "Phloroglucinol",
+      "category": "Antispasmodique",
+      "description": "Traitement des douleurs spasmodiques de l'intestin, des voies biliaires et gynécologiques.",
+      "dci": "Phloroglucinol"
+    },
+    {
+      "id": "drug-6",
+      "name": "Oméprazole 20mg (Mopral)",
+      "genericName": "Oméprazole",
+      "category": "Antiulcéreux / IPP",
+      "description": "Traitement du reflux gastro-œsophagien et des ulceres gastriques.",
+      "dci": "Omeprazole"
+    },
+    {
+      "id": "drug-7",
+      "name": "Métformine 850mg (Glucophage)",
+      "genericName": "Métformine",
+      "category": "Antidiabétique oral",
+      "description": "Traitement du diabète de type 2.",
+      "dci": "Metformin"
+    },
+    {
+      "id": "drug-8",
+      "name": "Amlodipine 5mg (Amlor)",
+      "genericName": "Amlodipine",
+      "category": "Antihypertenseur",
+      "description": "Traitement de l'hypertension artérielle et de l'angor.",
+      "dci": "Amlodipine"
+    },
+    {
+      "id": "drug-9",
+      "name": "Salbutamol Inhalateur 100µg (Ventoline)",
+      "genericName": "Salbutamol",
+      "category": "Bronchodilatateur",
+      "description": "Traitement de la crise d'asthme et des bronchospasmes.",
+      "dci": "Salbutamol"
+    },
+    {
+      "id": "drug-11",
+      "name": "Insuline Humaine (Mixtard / Lantus 100 UI/ml)",
+      "genericName": "Insuline Injectable",
+      "category": "Antidiabétique Injectable (Hormone)",
+      "description": "Traitement du diabète insulino-dépendant (Type 1 et Type 2). Médicament vital.",
+      "dci": "Insulin Human"
+    },
+    {
+      "id": "drug-10",
+      "name": "Vitamine C 1000mg Effervescent",
+      "genericName": "Acide Ascorbique",
+      "category": "Complément vitaminique",
+      "description": "Traitement des états de fatigue passagère et déficit en vitamine C.",
+      "dci": "Ascorbic Acid"
+    }
+  ],
+  "drug_stocks": [
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-1",
+      "status": "AVAILABLE",
+      "priceFcfa": 450,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-2",
+      "status": "AVAILABLE",
+      "priceFcfa": 1200,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-3",
+      "status": "AVAILABLE",
+      "priceFcfa": 2500,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-4",
+      "status": "AVAILABLE",
+      "priceFcfa": 800,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-5",
+      "status": "AVAILABLE",
+      "priceFcfa": 1500,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-9",
+      "status": "AVAILABLE",
+      "priceFcfa": 3200,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-1",
+      "drugId": "drug-11",
+      "status": "AVAILABLE",
+      "priceFcfa": 6800,
+      "lastUpdated": "2026-08-07 08:30"
+    },
+    {
+      "pharmacyId": "pharma-2",
+      "drugId": "drug-1",
+      "status": "AVAILABLE",
+      "priceFcfa": 500,
+      "lastUpdated": "2026-08-06 17:00"
+    },
+    {
+      "pharmacyId": "pharma-2",
+      "drugId": "drug-2",
+      "status": "OUT_OF_STOCK",
+      "priceFcfa": 1250,
+      "lastUpdated": "2026-08-06 17:00"
+    },
+    {
+      "pharmacyId": "pharma-2",
+      "drugId": "drug-3",
+      "status": "AVAILABLE",
+      "priceFcfa": 2400,
+      "lastUpdated": "2026-08-06 17:00"
+    },
+    {
+      "pharmacyId": "pharma-2",
+      "drugId": "drug-5",
+      "status": "ORDER_POSSIBLE",
+      "priceFcfa": 1600,
+      "lastUpdated": "2026-08-06 17:00"
+    },
+    {
+      "pharmacyId": "pharma-2",
+      "drugId": "drug-11",
+      "status": "OUT_OF_STOCK",
+      "priceFcfa": 7100,
+      "lastUpdated": "2026-08-06 17:00"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-1",
+      "status": "AVAILABLE",
+      "priceFcfa": 450,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-2",
+      "status": "AVAILABLE",
+      "priceFcfa": 1150,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-3",
+      "status": "AVAILABLE",
+      "priceFcfa": 2300,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-4",
+      "status": "AVAILABLE",
+      "priceFcfa": 750,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-6",
+      "status": "AVAILABLE",
+      "priceFcfa": 1800,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-9",
+      "status": "AVAILABLE",
+      "priceFcfa": 3100,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-3",
+      "drugId": "drug-11",
+      "status": "AVAILABLE",
+      "priceFcfa": 6500,
+      "lastUpdated": "2026-08-07 07:15"
+    },
+    {
+      "pharmacyId": "pharma-7",
+      "drugId": "drug-1",
+      "status": "AVAILABLE",
+      "priceFcfa": 450,
+      "lastUpdated": "2026-08-07 08:00"
+    },
+    {
+      "pharmacyId": "pharma-7",
+      "drugId": "drug-3",
+      "status": "AVAILABLE",
+      "priceFcfa": 2500,
+      "lastUpdated": "2026-08-07 08:00"
+    },
+    {
+      "pharmacyId": "pharma-7",
+      "drugId": "drug-4",
+      "status": "AVAILABLE",
+      "priceFcfa": 800,
+      "lastUpdated": "2026-08-07 08:00"
+    }
+  ],
+  "api_keys": [
+    {
+      "id": "key-sandbox-1",
+      "name": "Clé Sandbox Test",
+      "key_hash": "ca0e9e53acf58ef5bdab05ed2fd6b8c30f27d0e93524990a5c9a17e92716636f",
+      "key_prefix": "pdt_test_",
+      "masked_key": "pdt_test••••••••10",
+      "env": "test",
+      "tier": "FREE",
+      "daily_limit": 1000,
+      "created_at": "2026-08-11",
+      "status": "active",
+      "last_used": "2026-09-08T10:33:55.614Z",
+      "api_only": true,
+      "allowed_ips": "",
+      "allowed_domains": ""
+    },
+    {
+      "id": "key-live-1",
+      "name": "Clé Production Principale",
+      "key_hash": "bd9c9845019ab767b68377c8d1e8abf48b6390b9489b47ce861f7e51683c5d2e",
+      "key_prefix": "pdt_live_",
+      "masked_key": "pdt_live••••••••10",
+      "env": "live",
+      "tier": "FREE",
+      "daily_limit": 1000,
+      "created_at": "2026-08-11",
+      "status": "active",
+      "last_used": "2026-09-08T10:33:55.614Z",
+      "api_only": true,
+      "allowed_ips": "",
+      "allowed_domains": ""
+    }
+  ],
+  "usage_logs": [
+    {
+      "id": "log-1",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 42,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:33:55.614Z"
+    },
+    {
+      "id": "log-2",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:31:55.614Z"
+    },
+    {
+      "id": "log-3",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:29:55.614Z"
+    },
+    {
+      "id": "log-4",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:27:55.614Z"
+    },
+    {
+      "id": "log-5",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:25:55.614Z"
+    },
+    {
+      "id": "log-6",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 56,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:23:55.614Z"
+    },
+    {
+      "id": "log-7",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 42,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:21:55.614Z"
+    },
+    {
+      "id": "log-8",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 94,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:19:55.614Z"
+    },
+    {
+      "id": "log-9",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 20,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:17:55.614Z"
+    },
+    {
+      "id": "log-10",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:15:55.614Z"
+    },
+    {
+      "id": "log-11",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:13:55.614Z"
+    },
+    {
+      "id": "log-12",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:11:55.614Z"
+    },
+    {
+      "id": "log-13",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:09:55.614Z"
+    },
+    {
+      "id": "log-14",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:07:55.614Z"
+    },
+    {
+      "id": "log-15",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:05:55.614Z"
+    },
+    {
+      "id": "log-16",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:03:55.614Z"
+    },
+    {
+      "id": "log-17",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T10:01:55.614Z"
+    },
+    {
+      "id": "log-18",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:59:55.614Z"
+    },
+    {
+      "id": "log-19",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:57:55.614Z"
+    },
+    {
+      "id": "log-20",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:55:55.614Z"
+    },
+    {
+      "id": "log-21",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:53:55.614Z"
+    },
+    {
+      "id": "log-22",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:51:55.614Z"
+    },
+    {
+      "id": "log-23",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:49:55.614Z"
+    },
+    {
+      "id": "log-24",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:47:55.614Z"
+    },
+    {
+      "id": "log-25",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 89,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:45:55.614Z"
+    },
+    {
+      "id": "log-26",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:43:55.614Z"
+    },
+    {
+      "id": "log-27",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:41:55.614Z"
+    },
+    {
+      "id": "log-28",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 84,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:39:55.614Z"
+    },
+    {
+      "id": "log-29",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:37:55.614Z"
+    },
+    {
+      "id": "log-30",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 79,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:35:55.614Z"
+    },
+    {
+      "id": "log-31",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:33:55.614Z"
+    },
+    {
+      "id": "log-32",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:31:55.614Z"
+    },
+    {
+      "id": "log-33",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 81,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:29:55.614Z"
+    },
+    {
+      "id": "log-34",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:27:55.614Z"
+    },
+    {
+      "id": "log-35",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:25:55.614Z"
+    },
+    {
+      "id": "log-36",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 20,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:23:55.614Z"
+    },
+    {
+      "id": "log-37",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 40,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:21:55.614Z"
+    },
+    {
+      "id": "log-38",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:19:55.614Z"
+    },
+    {
+      "id": "log-39",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:17:55.614Z"
+    },
+    {
+      "id": "log-40",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:15:55.614Z"
+    },
+    {
+      "id": "log-41",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:13:55.614Z"
+    },
+    {
+      "id": "log-42",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:11:55.614Z"
+    },
+    {
+      "id": "log-43",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 30,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:09:55.614Z"
+    },
+    {
+      "id": "log-44",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:07:55.614Z"
+    },
+    {
+      "id": "log-45",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 99,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:05:55.614Z"
+    },
+    {
+      "id": "log-46",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 91,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:03:55.614Z"
+    },
+    {
+      "id": "log-47",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T09:01:55.614Z"
+    },
+    {
+      "id": "log-48",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:59:55.614Z"
+    },
+    {
+      "id": "log-49",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:57:55.614Z"
+    },
+    {
+      "id": "log-50",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:55:55.614Z"
+    },
+    {
+      "id": "log-51",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:53:55.614Z"
+    },
+    {
+      "id": "log-52",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:51:55.614Z"
+    },
+    {
+      "id": "log-53",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:49:55.614Z"
+    },
+    {
+      "id": "log-54",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 95,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:47:55.614Z"
+    },
+    {
+      "id": "log-55",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 99,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:45:55.614Z"
+    },
+    {
+      "id": "log-56",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 46,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:43:55.614Z"
+    },
+    {
+      "id": "log-57",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:41:55.614Z"
+    },
+    {
+      "id": "log-58",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:39:55.614Z"
+    },
+    {
+      "id": "log-59",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:37:55.614Z"
+    },
+    {
+      "id": "log-60",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:35:55.614Z"
+    },
+    {
+      "id": "log-61",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:33:55.614Z"
+    },
+    {
+      "id": "log-62",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:31:55.614Z"
+    },
+    {
+      "id": "log-63",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:29:55.614Z"
+    },
+    {
+      "id": "log-64",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:27:55.614Z"
+    },
+    {
+      "id": "log-65",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:25:55.614Z"
+    },
+    {
+      "id": "log-66",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:23:55.614Z"
+    },
+    {
+      "id": "log-67",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:21:55.614Z"
+    },
+    {
+      "id": "log-68",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:19:55.614Z"
+    },
+    {
+      "id": "log-69",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:17:55.614Z"
+    },
+    {
+      "id": "log-70",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:15:55.614Z"
+    },
+    {
+      "id": "log-71",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:13:55.614Z"
+    },
+    {
+      "id": "log-72",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:11:55.614Z"
+    },
+    {
+      "id": "log-73",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:09:55.614Z"
+    },
+    {
+      "id": "log-74",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:07:55.614Z"
+    },
+    {
+      "id": "log-75",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:05:55.614Z"
+    },
+    {
+      "id": "log-76",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:03:55.614Z"
+    },
+    {
+      "id": "log-77",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 61,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T08:01:55.614Z"
+    },
+    {
+      "id": "log-78",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 77,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:59:55.614Z"
+    },
+    {
+      "id": "log-79",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 85,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:57:55.614Z"
+    },
+    {
+      "id": "log-80",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:55:55.614Z"
+    },
+    {
+      "id": "log-81",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 43,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:53:55.614Z"
+    },
+    {
+      "id": "log-82",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 22,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:51:55.614Z"
+    },
+    {
+      "id": "log-83",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:49:55.614Z"
+    },
+    {
+      "id": "log-84",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:47:55.614Z"
+    },
+    {
+      "id": "log-85",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 71,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:45:55.614Z"
+    },
+    {
+      "id": "log-86",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:43:55.614Z"
+    },
+    {
+      "id": "log-87",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:41:55.614Z"
+    },
+    {
+      "id": "log-88",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 44,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:39:55.614Z"
+    },
+    {
+      "id": "log-89",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:37:55.614Z"
+    },
+    {
+      "id": "log-90",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:35:55.614Z"
+    },
+    {
+      "id": "log-91",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 44,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:33:55.614Z"
+    },
+    {
+      "id": "log-92",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:31:55.614Z"
+    },
+    {
+      "id": "log-93",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:29:55.614Z"
+    },
+    {
+      "id": "log-94",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:27:55.614Z"
+    },
+    {
+      "id": "log-95",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 20,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:25:55.614Z"
+    },
+    {
+      "id": "log-96",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 30,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:23:55.614Z"
+    },
+    {
+      "id": "log-97",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 35,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:21:55.614Z"
+    },
+    {
+      "id": "log-98",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:19:55.614Z"
+    },
+    {
+      "id": "log-99",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:17:55.614Z"
+    },
+    {
+      "id": "log-100",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 69,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:15:55.614Z"
+    },
+    {
+      "id": "log-101",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:13:55.614Z"
+    },
+    {
+      "id": "log-102",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 85,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:11:55.614Z"
+    },
+    {
+      "id": "log-103",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:09:55.614Z"
+    },
+    {
+      "id": "log-104",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 71,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:07:55.614Z"
+    },
+    {
+      "id": "log-105",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 62,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:05:55.614Z"
+    },
+    {
+      "id": "log-106",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:03:55.614Z"
+    },
+    {
+      "id": "log-107",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T07:01:55.614Z"
+    },
+    {
+      "id": "log-108",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 50,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:59:55.614Z"
+    },
+    {
+      "id": "log-109",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:57:55.614Z"
+    },
+    {
+      "id": "log-110",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:55:55.614Z"
+    },
+    {
+      "id": "log-111",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 87,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:53:55.614Z"
+    },
+    {
+      "id": "log-112",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:51:55.614Z"
+    },
+    {
+      "id": "log-113",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:49:55.614Z"
+    },
+    {
+      "id": "log-114",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 61,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:47:55.614Z"
+    },
+    {
+      "id": "log-115",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:45:55.614Z"
+    },
+    {
+      "id": "log-116",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:43:55.614Z"
+    },
+    {
+      "id": "log-117",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:41:55.614Z"
+    },
+    {
+      "id": "log-118",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:39:55.614Z"
+    },
+    {
+      "id": "log-119",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:37:55.614Z"
+    },
+    {
+      "id": "log-120",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:35:55.614Z"
+    },
+    {
+      "id": "log-121",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:33:55.614Z"
+    },
+    {
+      "id": "log-122",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 81,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:31:55.614Z"
+    },
+    {
+      "id": "log-123",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:29:55.614Z"
+    },
+    {
+      "id": "log-124",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:27:55.614Z"
+    },
+    {
+      "id": "log-125",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:25:55.614Z"
+    },
+    {
+      "id": "log-126",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:23:55.614Z"
+    },
+    {
+      "id": "log-127",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:21:55.614Z"
+    },
+    {
+      "id": "log-128",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:19:55.614Z"
+    },
+    {
+      "id": "log-129",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:17:55.614Z"
+    },
+    {
+      "id": "log-130",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 67,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:15:55.614Z"
+    },
+    {
+      "id": "log-131",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 51,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:13:55.614Z"
+    },
+    {
+      "id": "log-132",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 92,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:11:55.614Z"
+    },
+    {
+      "id": "log-133",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 97,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:09:55.614Z"
+    },
+    {
+      "id": "log-134",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:07:55.614Z"
+    },
+    {
+      "id": "log-135",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:05:55.614Z"
+    },
+    {
+      "id": "log-136",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:03:55.614Z"
+    },
+    {
+      "id": "log-137",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 98,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T06:01:55.614Z"
+    },
+    {
+      "id": "log-138",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 16,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:59:55.614Z"
+    },
+    {
+      "id": "log-139",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 98,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:57:55.614Z"
+    },
+    {
+      "id": "log-140",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:55:55.614Z"
+    },
+    {
+      "id": "log-141",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:53:55.614Z"
+    },
+    {
+      "id": "log-142",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 19,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:51:55.614Z"
+    },
+    {
+      "id": "log-143",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:49:55.614Z"
+    },
+    {
+      "id": "log-144",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:47:55.614Z"
+    },
+    {
+      "id": "log-145",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:45:55.614Z"
+    },
+    {
+      "id": "log-146",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:43:55.614Z"
+    },
+    {
+      "id": "log-147",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:41:55.614Z"
+    },
+    {
+      "id": "log-148",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 90,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:39:55.614Z"
+    },
+    {
+      "id": "log-149",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:37:55.614Z"
+    },
+    {
+      "id": "log-150",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:35:55.614Z"
+    },
+    {
+      "id": "log-151",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 82,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:33:55.614Z"
+    },
+    {
+      "id": "log-152",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:31:55.614Z"
+    },
+    {
+      "id": "log-153",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:29:55.614Z"
+    },
+    {
+      "id": "log-154",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 43,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:27:55.614Z"
+    },
+    {
+      "id": "log-155",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:25:55.614Z"
+    },
+    {
+      "id": "log-156",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:23:55.614Z"
+    },
+    {
+      "id": "log-157",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 95,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:21:55.614Z"
+    },
+    {
+      "id": "log-158",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:19:55.614Z"
+    },
+    {
+      "id": "log-159",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 82,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:17:55.614Z"
+    },
+    {
+      "id": "log-160",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 93,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:15:55.614Z"
+    },
+    {
+      "id": "log-161",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:13:55.614Z"
+    },
+    {
+      "id": "log-162",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 61,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:11:55.614Z"
+    },
+    {
+      "id": "log-163",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 42,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:09:55.614Z"
+    },
+    {
+      "id": "log-164",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:07:55.614Z"
+    },
+    {
+      "id": "log-165",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 44,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:05:55.614Z"
+    },
+    {
+      "id": "log-166",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 87,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:03:55.614Z"
+    },
+    {
+      "id": "log-167",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 29,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T05:01:55.614Z"
+    },
+    {
+      "id": "log-168",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:59:55.614Z"
+    },
+    {
+      "id": "log-169",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:57:55.614Z"
+    },
+    {
+      "id": "log-170",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:55:55.614Z"
+    },
+    {
+      "id": "log-171",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 77,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:53:55.614Z"
+    },
+    {
+      "id": "log-172",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:51:55.614Z"
+    },
+    {
+      "id": "log-173",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:49:55.614Z"
+    },
+    {
+      "id": "log-174",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:47:55.614Z"
+    },
+    {
+      "id": "log-175",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:45:55.614Z"
+    },
+    {
+      "id": "log-176",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:43:55.614Z"
+    },
+    {
+      "id": "log-177",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:41:55.614Z"
+    },
+    {
+      "id": "log-178",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:39:55.614Z"
+    },
+    {
+      "id": "log-179",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:37:55.614Z"
+    },
+    {
+      "id": "log-180",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 32,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:35:55.614Z"
+    },
+    {
+      "id": "log-181",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 62,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:33:55.614Z"
+    },
+    {
+      "id": "log-182",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:31:55.614Z"
+    },
+    {
+      "id": "log-183",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 97,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:29:55.614Z"
+    },
+    {
+      "id": "log-184",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 87,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:27:55.614Z"
+    },
+    {
+      "id": "log-185",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 99,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:25:55.614Z"
+    },
+    {
+      "id": "log-186",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:23:55.614Z"
+    },
+    {
+      "id": "log-187",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:21:55.614Z"
+    },
+    {
+      "id": "log-188",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 89,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:19:55.614Z"
+    },
+    {
+      "id": "log-189",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 53,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:17:55.614Z"
+    },
+    {
+      "id": "log-190",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 23,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:15:55.614Z"
+    },
+    {
+      "id": "log-191",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:13:55.614Z"
+    },
+    {
+      "id": "log-192",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:11:55.614Z"
+    },
+    {
+      "id": "log-193",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:09:55.614Z"
+    },
+    {
+      "id": "log-194",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:07:55.614Z"
+    },
+    {
+      "id": "log-195",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:05:55.614Z"
+    },
+    {
+      "id": "log-196",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 96,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:03:55.614Z"
+    },
+    {
+      "id": "log-197",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T04:01:55.614Z"
+    },
+    {
+      "id": "log-198",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 40,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:59:55.614Z"
+    },
+    {
+      "id": "log-199",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 96,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:57:55.614Z"
+    },
+    {
+      "id": "log-200",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:55:55.614Z"
+    },
+    {
+      "id": "log-201",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:53:55.614Z"
+    },
+    {
+      "id": "log-202",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:51:55.614Z"
+    },
+    {
+      "id": "log-203",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:49:55.614Z"
+    },
+    {
+      "id": "log-204",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:47:55.614Z"
+    },
+    {
+      "id": "log-205",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:45:55.614Z"
+    },
+    {
+      "id": "log-206",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 86,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:43:55.614Z"
+    },
+    {
+      "id": "log-207",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 28,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:41:55.614Z"
+    },
+    {
+      "id": "log-208",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 79,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:39:55.614Z"
+    },
+    {
+      "id": "log-209",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:37:55.614Z"
+    },
+    {
+      "id": "log-210",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:35:55.614Z"
+    },
+    {
+      "id": "log-211",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:33:55.614Z"
+    },
+    {
+      "id": "log-212",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:31:55.614Z"
+    },
+    {
+      "id": "log-213",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:29:55.614Z"
+    },
+    {
+      "id": "log-214",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 69,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:27:55.614Z"
+    },
+    {
+      "id": "log-215",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 58,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:25:55.614Z"
+    },
+    {
+      "id": "log-216",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 92,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:23:55.614Z"
+    },
+    {
+      "id": "log-217",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 19,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:21:55.614Z"
+    },
+    {
+      "id": "log-218",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:19:55.614Z"
+    },
+    {
+      "id": "log-219",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:17:55.614Z"
+    },
+    {
+      "id": "log-220",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:15:55.614Z"
+    },
+    {
+      "id": "log-221",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 95,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:13:55.614Z"
+    },
+    {
+      "id": "log-222",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:11:55.614Z"
+    },
+    {
+      "id": "log-223",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 70,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:09:55.614Z"
+    },
+    {
+      "id": "log-224",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:07:55.614Z"
+    },
+    {
+      "id": "log-225",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 34,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:05:55.614Z"
+    },
+    {
+      "id": "log-226",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 42,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:03:55.614Z"
+    },
+    {
+      "id": "log-227",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T03:01:55.614Z"
+    },
+    {
+      "id": "log-228",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:59:55.614Z"
+    },
+    {
+      "id": "log-229",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 19,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:57:55.614Z"
+    },
+    {
+      "id": "log-230",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 72,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:55:55.614Z"
+    },
+    {
+      "id": "log-231",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:53:55.614Z"
+    },
+    {
+      "id": "log-232",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 98,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:51:55.614Z"
+    },
+    {
+      "id": "log-233",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 25,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:49:55.614Z"
+    },
+    {
+      "id": "log-234",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 98,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:47:55.614Z"
+    },
+    {
+      "id": "log-235",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:45:55.614Z"
+    },
+    {
+      "id": "log-236",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:43:55.614Z"
+    },
+    {
+      "id": "log-237",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:41:55.614Z"
+    },
+    {
+      "id": "log-238",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:39:55.614Z"
+    },
+    {
+      "id": "log-239",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 69,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:37:55.614Z"
+    },
+    {
+      "id": "log-240",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:35:55.614Z"
+    },
+    {
+      "id": "log-241",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 59,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:33:55.614Z"
+    },
+    {
+      "id": "log-242",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 31,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:31:55.614Z"
+    },
+    {
+      "id": "log-243",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:29:55.614Z"
+    },
+    {
+      "id": "log-244",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:27:55.614Z"
+    },
+    {
+      "id": "log-245",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 54,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:25:55.614Z"
+    },
+    {
+      "id": "log-246",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:23:55.614Z"
+    },
+    {
+      "id": "log-247",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:21:55.614Z"
+    },
+    {
+      "id": "log-248",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:19:55.614Z"
+    },
+    {
+      "id": "log-249",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:17:55.614Z"
+    },
+    {
+      "id": "log-250",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:15:55.614Z"
+    },
+    {
+      "id": "log-251",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 40,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:13:55.614Z"
+    },
+    {
+      "id": "log-252",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 50,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:11:55.614Z"
+    },
+    {
+      "id": "log-253",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:09:55.614Z"
+    },
+    {
+      "id": "log-254",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:07:55.614Z"
+    },
+    {
+      "id": "log-255",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:05:55.614Z"
+    },
+    {
+      "id": "log-256",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:03:55.614Z"
+    },
+    {
+      "id": "log-257",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T02:01:55.614Z"
+    },
+    {
+      "id": "log-258",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 30,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:59:55.614Z"
+    },
+    {
+      "id": "log-259",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:57:55.614Z"
+    },
+    {
+      "id": "log-260",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:55:55.614Z"
+    },
+    {
+      "id": "log-261",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 96,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:53:55.614Z"
+    },
+    {
+      "id": "log-262",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:51:55.614Z"
+    },
+    {
+      "id": "log-263",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 53,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:49:55.614Z"
+    },
+    {
+      "id": "log-264",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 26,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:47:55.614Z"
+    },
+    {
+      "id": "log-265",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:45:55.614Z"
+    },
+    {
+      "id": "log-266",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:43:55.614Z"
+    },
+    {
+      "id": "log-267",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 75,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:41:55.614Z"
+    },
+    {
+      "id": "log-268",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:39:55.614Z"
+    },
+    {
+      "id": "log-269",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 27,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:37:55.614Z"
+    },
+    {
+      "id": "log-270",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 57,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:35:55.614Z"
+    },
+    {
+      "id": "log-271",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 49,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:33:55.614Z"
+    },
+    {
+      "id": "log-272",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 47,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:31:55.614Z"
+    },
+    {
+      "id": "log-273",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:29:55.614Z"
+    },
+    {
+      "id": "log-274",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:27:55.614Z"
+    },
+    {
+      "id": "log-275",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 98,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:25:55.614Z"
+    },
+    {
+      "id": "log-276",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 37,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:23:55.614Z"
+    },
+    {
+      "id": "log-277",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 64,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:21:55.614Z"
+    },
+    {
+      "id": "log-278",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 60,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:19:55.614Z"
+    },
+    {
+      "id": "log-279",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 33,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:17:55.614Z"
+    },
+    {
+      "id": "log-280",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 82,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:15:55.614Z"
+    },
+    {
+      "id": "log-281",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 19,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:13:55.614Z"
+    },
+    {
+      "id": "log-282",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 49,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:11:55.614Z"
+    },
+    {
+      "id": "log-283",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 66,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:09:55.614Z"
+    },
+    {
+      "id": "log-284",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:07:55.614Z"
+    },
+    {
+      "id": "log-285",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 88,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:05:55.614Z"
+    },
+    {
+      "id": "log-286",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 69,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:03:55.614Z"
+    },
+    {
+      "id": "log-287",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 82,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T01:01:55.614Z"
+    },
+    {
+      "id": "log-288",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 38,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:59:55.614Z"
+    },
+    {
+      "id": "log-289",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 49,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:57:55.614Z"
+    },
+    {
+      "id": "log-290",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 96,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:55:55.614Z"
+    },
+    {
+      "id": "log-291",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 39,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:53:55.614Z"
+    },
+    {
+      "id": "log-292",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:51:55.614Z"
+    },
+    {
+      "id": "log-293",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 68,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:49:55.614Z"
+    },
+    {
+      "id": "log-294",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:47:55.614Z"
+    },
+    {
+      "id": "log-295",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 83,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:45:55.614Z"
+    },
+    {
+      "id": "log-296",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:43:55.614Z"
+    },
+    {
+      "id": "log-297",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 74,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:41:55.614Z"
+    },
+    {
+      "id": "log-298",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 74,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:39:55.614Z"
+    },
+    {
+      "id": "log-299",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 15,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:37:55.614Z"
+    },
+    {
+      "id": "log-300",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 52,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:35:55.614Z"
+    },
+    {
+      "id": "log-301",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 65,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:33:55.614Z"
+    },
+    {
+      "id": "log-302",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 90,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:31:55.614Z"
+    },
+    {
+      "id": "log-303",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 77,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:29:55.614Z"
+    },
+    {
+      "id": "log-304",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 41,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:27:55.614Z"
+    },
+    {
+      "id": "log-305",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 87,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:25:55.614Z"
+    },
+    {
+      "id": "log-306",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 24,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:23:55.614Z"
+    },
+    {
+      "id": "log-307",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 40,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:21:55.614Z"
+    },
+    {
+      "id": "log-308",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 97,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:19:55.614Z"
+    },
+    {
+      "id": "log-309",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 51,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:17:55.614Z"
+    },
+    {
+      "id": "log-310",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 87,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:15:55.614Z"
+    },
+    {
+      "id": "log-311",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 48,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:13:55.614Z"
+    },
+    {
+      "id": "log-312",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 43,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:11:55.614Z"
+    },
+    {
+      "id": "log-313",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 95,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:09:55.614Z"
+    },
+    {
+      "id": "log-314",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 78,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:07:55.614Z"
+    },
+    {
+      "id": "log-315",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 76,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:05:55.614Z"
+    },
+    {
+      "id": "log-316",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 80,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:03:55.614Z"
+    },
+    {
+      "id": "log-317",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 55,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-08T00:01:55.614Z"
+    },
+    {
+      "id": "log-318",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 18,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:59:55.614Z"
+    },
+    {
+      "id": "log-319",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 71,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:57:55.614Z"
+    },
+    {
+      "id": "log-320",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 22,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:55:55.614Z"
+    },
+    {
+      "id": "log-321",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 69,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:53:55.614Z"
+    },
+    {
+      "id": "log-322",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 73,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:51:55.614Z"
+    },
+    {
+      "id": "log-323",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 36,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:49:55.614Z"
+    },
+    {
+      "id": "log-324",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 21,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:47:55.614Z"
+    },
+    {
+      "id": "log-325",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/gardes",
+      "method": "GET",
+      "status_code": 400,
+      "response_time_ms": 15,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:45:55.614Z"
+    },
+    {
+      "id": "log-326",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/pharmacies",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 45,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:43:55.614Z"
+    },
+    {
+      "id": "log-327",
+      "api_key_id": "key-live-1",
+      "key_prefix": "pdt_live_",
+      "endpoint": "/api/v1/disponibilites",
+      "method": "GET",
+      "status_code": 200,
+      "response_time_ms": 63,
+      "ip": "197.214.12.44",
+      "timestamp": "2026-09-07T23:41:55.614Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "REP-9001",
+      "pharmacy_id": "pharma-1",
+      "issue_type": "guard_mismatch",
+      "description": "Mise à jour du numéro de garde de nuit pour Agoè Assiyéyé",
+      "reporter_email": "titulaire@pharma-agoe.tg",
+      "status": "UNDER_REVIEW",
+      "status_label_fr": "En vérification",
+      "created_at": "2026-09-07T10:33:55.614Z",
+      "updated_at": "2026-09-08T10:33:55.615Z",
+      "ip_hash": "f715a729385715b9892d06b0e471ce08",
+      "history": [
+        {
+          "status": "PENDING",
+          "timestamp": "2026-09-07T10:33:55.614Z",
+          "note": "Signalement émis"
+        },
+        {
+          "status": "UNDER_REVIEW",
+          "timestamp": "2026-09-08T10:33:55.615Z",
+          "note": "Agent en contact avec le titulaire"
+        }
+      ]
+    }
+  ]
+}

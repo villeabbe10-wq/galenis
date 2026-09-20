@@ -1,0 +1,111 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default-deny global safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // --- Hardened Global Helpers ---
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Test connection endpoint helper
+    match /test/{testId} {
+      allow read: if true;
+    }
+
+    // --- 1. Collection Pharmacies ---
+    function isValidPharmacy(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 150 &&
+             data.city is string && data.city.size() <= 100 &&
+             data.region is string && data.region.size() <= 100 &&
+             data.phone is string && data.phone.size() <= 50 &&
+             data.status in ['OPEN', 'CLOSED', 'DE_GARDE'] &&
+             (!('isGuardToday' in data) || data.isGuardToday is bool);
+    }
+
+    match /pharmacies/{pharmacyId} {
+      // Lecture publique ouverte à tous les citoyens togolais (Recherche urgence / garde)
+      allow get, list: if true;
+
+      // Écriture / mise à jour (autorisée avec validation stricte du schéma)
+      allow create, update: if isValidId(pharmacyId) && isValidPharmacy(incoming());
+      allow delete: if isSignedIn();
+    }
+
+    // --- 2. Collection Médicaments ---
+    function isValidDrug(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 150 &&
+             data.category is string && data.category.size() <= 100;
+    }
+
+    match /drugs/{drugId} {
+      allow get, list: if true;
+      allow create, update: if isValidId(drugId) && isValidDrug(incoming());
+      allow delete: if isSignedIn();
+    }
+
+    // --- 3. Collection Stocks & Disponibilités ---
+    function isValidStock(data) {
+      return data.pharmacyId is string && data.pharmacyId.size() <= 64 &&
+             data.drugId is string && data.drugId.size() <= 64 &&
+             data.status in ['AVAILABLE', 'OUT_OF_STOCK', 'ORDER_POSSIBLE'] &&
+             data.priceFcfa is number && data.priceFcfa >= 0;
+    }
+
+    match /stocks/{stockId} {
+      allow get, list: if true;
+      allow create, update: if isValidId(stockId) && isValidStock(incoming());
+      allow delete: if isSignedIn();
+    }
+
+    // --- 4. Collection Réservations Patients ---
+    function isValidReservation(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.pharmacyId is string && data.pharmacyId.size() <= 64 &&
+             data.patientName is string && data.patientName.size() > 0 && data.patientName.size() <= 100 &&
+             data.patientPhone is string && data.patientPhone.size() > 0 && data.patientPhone.size() <= 50 &&
+             data.drugName is string && data.drugName.size() <= 150 &&
+             data.quantity is number && data.quantity > 0 && data.quantity <= 100;
+    }
+
+    match /reservations/{reservationId} {
+      allow get, list: if true;
+      allow create: if isValidId(reservationId) && isValidReservation(incoming());
+      allow update: if isValidId(reservationId) && isValidReservation(incoming());
+      allow delete: if isSignedIn();
+    }
+
+    // --- 5. Collection Avis & Suggestions (App Feedback) ---
+    function isValidFeedback(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.title is string && data.title.size() > 0 && data.title.size() <= 150 &&
+             data.description is string && data.description.size() > 0 && data.description.size() <= 1000 &&
+             data.rating is number && data.rating >= 1 && data.rating <= 5;
+    }
+
+    match /app_feedbacks/{feedbackId} {
+      allow get, list: if true;
+      allow create: if isValidId(feedbackId) && isValidFeedback(incoming());
+      allow update: if isValidId(feedbackId) && isValidFeedback(incoming());
+      allow delete: if isSignedIn();
+    }
+  }
+}
