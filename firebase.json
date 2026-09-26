@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "galenis",
     "public": "dist",
     "ignore": [
       "firebase.json",

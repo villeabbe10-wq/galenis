@@ -34,6 +34,7 @@ import {
   syncFeedbackToCloud,
   subscribeToRemotePharmacies
 } from './firebase';
+import { sendGuardPushNotification } from './notificationService';
 
 const KEYS = {
   PHARMACIES: 'galenis_togo_pharmacies_v1',
@@ -52,23 +53,19 @@ const KEYS = {
   DEV_DOSSIERS: 'galenis_togo_developer_dossiers_v1',
   STOCK_AUDIT: 'galenis_togo_stock_audits_v1',
   GUARD_CERTIFICATES: 'galenis_togo_guard_certificates_v1',
-  AD_BANNERS: 'galenis_togo_ad_banners_v1'
+  AD_BANNERS: 'galenis_togo_ad_banners_v4'
 };
 
 const INITIAL_AD_BANNERS: AdBanner[] = [
   {
     id: 'ad_1',
     title: 'Assurance Santé AMU & Tiers-Payant Simplifié',
-    subtitle: 'Souscrivez votre couverture complémentaire en ligne et bénéficiez de 80% de prise en charge immédiate.',
+    subtitle: 'Informations sur la prise en charge complémentaire et le tiers-payant dans les officines partenaires.',
     advertiser: 'SUNU Assurances Togo',
     advertiserLogo: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=100&auto=format&fit=crop&q=60',
     category: 'ASSURANCE',
     placement: 'HOME_TOP',
     badgeText: 'Partenaire Officiel Santé',
-    callToAction: 'Simuler mon devis assurance',
-    targetUrl: 'https://sunu-assurances.tg/sante-amu',
-    targetPhone: '+228 22 21 00 00',
-    targetWhatsapp: '22890000000',
     status: 'ACTIVE',
     monthlyFeeFcfa: 175000,
     paymentStatus: 'PAID',
@@ -77,22 +74,18 @@ const INITIAL_AD_BANNERS: AdBanner[] = [
     clicks: 642,
     startDate: '2026-09-01',
     endDate: '2026-12-31',
-    notes: 'Campagne Trimestre 4 - Ciblage Citoyens Lomé & Régions',
+    notes: 'Campagne Trimestre 4 - Information Tiers-Payant',
     createdAt: '2026-09-01T08:00:00Z'
   },
   {
     id: 'ad_2',
     title: 'Dépistage & Soins Spécialisés 24h/24',
-    subtitle: 'Plateau technique moderne, scanner, laboratoire certifié et urgences médicales au cœur de Lomé.',
+    subtitle: 'Plateau technique médical, scanner, laboratoire d’analyses et service de garde à Lomé.',
     advertiser: 'Clinique Internationale Biasa Lomé',
     advertiserLogo: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=100&auto=format&fit=crop&q=60',
     category: 'CLINIQUE',
     placement: 'DRUG_SEARCH',
     badgeText: 'Centre Médical Agréé',
-    callToAction: 'Prendre rendez-vous médical',
-    targetUrl: 'https://cliniquebiasa.tg',
-    targetPhone: '+228 22 21 15 55',
-    targetWhatsapp: '22891223344',
     status: 'ACTIVE',
     monthlyFeeFcfa: 150000,
     paymentStatus: 'PAID',
@@ -101,22 +94,18 @@ const INITIAL_AD_BANNERS: AdBanner[] = [
     clicks: 410,
     startDate: '2026-09-10',
     endDate: '2026-11-30',
-    notes: 'Bannière ciblée sur les recherches de molécules cardiologie et pédiatrie',
+    notes: 'Bannière informative médicale',
     createdAt: '2026-09-10T09:30:00Z'
   },
   {
     id: 'ad_3',
     title: 'Compléments Nutritionnels & Soins Maman-Bébé',
-    subtitle: 'Conseils personnalisés par des docteurs en pharmacie et livraison express à domicile sur le Grand Lomé.',
+    subtitle: 'Informations et conseils pharmaceutiques disponibles auprès de vos pharmaciens d’officine au Togo.',
     advertiser: 'Laboratoires Sanofi Afrique de l’Ouest',
     advertiserLogo: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&auto=format&fit=crop&q=60',
     category: 'LABORATOIRE',
     placement: 'HOME_BOTTOM',
     badgeText: 'Qualité Pharmaceutique Certifiée',
-    callToAction: 'Découvrir la gamme certifiée',
-    targetUrl: 'https://sanofi.africa/fr/produits-famille',
-    targetPhone: '+228 22 51 02 03',
-    targetWhatsapp: '22892334455',
     status: 'ACTIVE',
     monthlyFeeFcfa: 220000,
     paymentStatus: 'PAID',
@@ -137,10 +126,6 @@ const INITIAL_AD_BANNERS: AdBanner[] = [
     category: 'PARAPHARMACIE',
     placement: 'CITIZEN_DASHBOARD',
     badgeText: 'Formulation Européenne',
-    callToAction: 'Voir les officines distributrices',
-    targetUrl: 'https://denkpharma.de/fr',
-    targetPhone: '+228 90 11 22 33',
-    targetWhatsapp: '22890112233',
     status: 'ACTIVE',
     monthlyFeeFcfa: 125000,
     paymentStatus: 'PAID',
@@ -395,6 +380,7 @@ export function updateGuardStatus(pharmacyId: string, isGuard: boolean, status?:
   const list = getPharmacies();
   const index = list.findIndex(p => p.id === pharmacyId);
   if (index >= 0) {
+    const wasGuard = list[index].isGuardToday;
     list[index].isGuardToday = isGuard;
     if (status) {
       list[index].status = status;
@@ -404,6 +390,20 @@ export function updateGuardStatus(pharmacyId: string, isGuard: boolean, status?:
     list[index].lastVerified = `${new Date().toISOString().split('T')[0]} (Déclaration de garde)`;
     localStorage.setItem(KEYS.PHARMACIES, JSON.stringify(list));
     syncPharmacyToCloud(list[index]).catch(() => {});
+
+    // Déclencher notification push locale si la pharmacie passe en garde
+    if (isGuard && !wasGuard) {
+      sendGuardPushNotification({
+        pharmacy: list[index],
+        type: 'GUARD_STARTED',
+        customTitle: `⚡ Pharmacie de Garde Active : ${list[index].name}`,
+        customMessage: `L'officine ${list[index].name} (${list[index].quarter}, ${list[index].city}) est désormais DE GARDE 24h/24. Tél : ${list[index].phone}`
+      });
+    }
+
+    window.dispatchEvent(new CustomEvent('galenis_guard_status_changed', { 
+      detail: { pharmacy: list[index], isGuard } 
+    }));
   }
 }
 

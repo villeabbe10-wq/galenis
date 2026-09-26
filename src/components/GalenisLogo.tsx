@@ -18,14 +18,13 @@ export const GalenisLogo: React.FC<LogoProps> = ({
   lightMode = false,
   animated = true
 }) => {
-  // Primary colors matching official logo
   const pharmaTextColor = textColor || (lightMode ? "text-slate-900" : "text-slate-900");
   const sloganTextColor = lightMode ? "text-slate-600" : "text-slate-200";
 
   if (variant === 'full' || showText) {
     return (
       <div className="inline-flex items-center gap-3 sm:gap-4 shrink-0 select-none group">
-        {/* Logo Symbol Icon */}
+        {/* Official Brand Symbol Icon */}
         <motion.div 
           className={`relative inline-flex items-center justify-center shrink-0 cursor-pointer ${className}`}
           whileHover={{ scale: 1.06, rotate: [0, -1, 1, 0] }}
@@ -78,8 +77,8 @@ export const GalenisLogo: React.FC<LogoProps> = ({
   );
 };
 
-// SVG Vector for the official Galenis Togo "P" Icon with Smooth Keyframe Animations
-const LogoSymbol: React.FC<{ animated?: boolean }> = ({ animated = true }) => {
+// SVG Vector for the official Galenis / DataPharma Togo Logo matching the original emblem
+export const LogoSymbol: React.FC<{ animated?: boolean }> = ({ animated = true }) => {
   return (
     <svg 
       viewBox="0 0 200 200" 
@@ -88,174 +87,131 @@ const LogoSymbol: React.FC<{ animated?: boolean }> = ({ animated = true }) => {
       className="w-full h-full filter drop-shadow-md overflow-visible"
     >
       <defs>
-        {/* Main P Gradient */}
-        <linearGradient id="pGradient" x1="20%" y1="0%" x2="100%" y2="100%">
+        {/* Outer Loop Green to Cyan Gradient */}
+        <linearGradient id="outerLoopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#00A859" />
-          <stop offset="50%" stopColor="#0284C7" />
-          <stop offset="100%" stopColor="#0B192C" />
+          <stop offset="35%" stopColor="#00C48C" />
+          <stop offset="70%" stopColor="#0284C7" />
+          <stop offset="100%" stopColor="#0369A1" />
         </linearGradient>
 
-        <linearGradient id="ribbonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#00A859" />
-          <stop offset="100%" stopColor="#059669" />
+        {/* Center Blue Circle Gradient */}
+        <linearGradient id="centerCircleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#0369A1" />
+          <stop offset="60%" stopColor="#003B73" />
+          <stop offset="100%" stopColor="#072042" />
         </linearGradient>
 
-        <linearGradient id="glowLinear" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#34D399" stopOpacity="0.8" />
-          <stop offset="100%" stopColor="#059669" stopOpacity="0.2" />
-        </linearGradient>
-
-        <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="1" dy="2" stdDeviation="2" floodOpacity="0.3" />
+        {/* Glow & Shadow */}
+        <filter id="logoGlow" x="-15%" y="-15%" width="130%" height="130%">
+          <feDropShadow dx="0" dy="2" stdDeviation="2.5" floodColor="#00A859" floodOpacity="0.25" />
         </filter>
 
         <filter id="crossGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feGaussianBlur stdDeviation="2" result="blur" />
-          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#ffffff" floodOpacity="0.5" />
         </filter>
 
         {animated && (
           <style>{`
             @keyframes pulseHeartbeat {
               0%, 100% { transform: scale(1); opacity: 1; }
-              14% { transform: scale(1.12); opacity: 0.95; }
+              14% { transform: scale(1.08); opacity: 0.95; }
               28% { transform: scale(1); opacity: 1; }
-              42% { transform: scale(1.08); opacity: 0.95; }
+              42% { transform: scale(1.05); opacity: 0.95; }
               70% { transform: scale(1); opacity: 1; }
-            }
-            @keyframes pulseNode {
-              0%, 100% { transform: scale(1); opacity: 0.85; }
-              50% { transform: scale(1.22); opacity: 1; filter: drop-shadow(0 0 4px #00A859); }
-            }
-            @keyframes pulseGoldNode {
-              0%, 100% { transform: scale(1); opacity: 0.9; }
-              50% { transform: scale(1.3); opacity: 1; filter: drop-shadow(0 0 5px #FFCC00); }
-            }
-            @keyframes linePulse {
-              0%, 100% { stroke-opacity: 0.7; stroke-width: 4px; }
-              50% { stroke-opacity: 1; stroke-width: 5.5px; }
-            }
-            @keyframes starTwinkle {
-              0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
-              50% { transform: scale(1.15) rotate(15deg); opacity: 0.85; }
-            }
-            @keyframes ribbonSheen {
-              0% { opacity: 0.3; transform: translateX(-30px); }
-              50% { opacity: 0.8; }
-              100% { opacity: 0.3; transform: translateX(30px); }
             }
             @keyframes galenisShine {
               0% { transform: translateX(-100%); }
               100% { transform: translateX(100%); }
             }
-            .logo-cross-animated {
-              transform-origin: 108px 90px;
+            .medical-cross-pulse {
+              transform-origin: 92px 96px;
               animation: pulseHeartbeat 3.2s ease-in-out infinite;
             }
-            .node-1-animated { transform-origin: 18px 70px; animation: pulseNode 3s ease-in-out infinite 0.2s; }
-            .node-2-animated { transform-origin: 48px 88px; animation: pulseGoldNode 2.6s ease-in-out infinite 0.6s; }
-            .node-3-animated { transform-origin: 28px 115px; animation: pulseNode 3.4s ease-in-out infinite 1s; }
-            .node-4-animated { transform-origin: 12px 165px; animation: pulseNode 3s ease-in-out infinite 1.4s; }
-            .line-pulse-animated { animation: linePulse 2.8s ease-in-out infinite; }
-            .star-twinkle-animated { transform-origin: 50px 163px; animation: starTwinkle 4s ease-in-out infinite; }
           `}</style>
         )}
       </defs>
 
-      {/* Main Stylized Letter 'P' Outer Path */}
+      {/* Main Stylized Letter 'D' / Loop with Green-Cyan Gradient */}
       <path
-        d="M 65 25 
-           C 115 25, 175 40, 175 90 
-           C 175 135, 125 155, 80 155
-           L 65 155
-           L 65 180
-           C 65 188, 55 190, 50 185
-           L 45 178
-           L 45 45
-           C 45 32, 53 25, 65 25 Z"
-        fill="url(#pGradient)"
+        d="M 28 24
+           C 28 14, 40 10, 52 10
+           L 115 10
+           C 165 10, 190 42, 190 95
+           C 190 148, 160 185, 115 185
+           L 55 185
+           C 35 185, 28 175, 28 160
+           Z"
+        fill="url(#outerLoopGrad)"
+        filter="url(#logoGlow)"
       />
 
-      {/* Inner Loop Cutout of P */}
+      {/* Inner White Cutout Framing the Blue Center */}
       <path
-        d="M 72 52 
-           L 105 52 
-           C 135 52, 148 68, 148 90 
-           C 148 112, 132 128, 102 128 
-           L 72 128 Z"
+        d="M 52 38
+           L 105 38
+           C 142 38, 162 62, 162 95
+           C 162 128, 140 155, 105 155
+           L 52 155
+           Z"
         fill="#FFFFFF"
       />
 
-      {/* Medical Cross Symbol inside top loop - with heartbeat breathing animation */}
+      {/* Center Deep Blue Medical Circle */}
+      <circle
+        cx="92"
+        cy="96"
+        r="44"
+        fill="url(#centerCircleGrad)"
+      />
+
+      {/* Bold White Medical Cross inside Blue Circle */}
       <g 
-        fill="#00A859" 
-        className={animated ? "logo-cross-animated" : ""}
+        fill="#FFFFFF" 
+        className={animated ? "medical-cross-pulse" : ""}
         filter="url(#crossGlow)"
       >
-        <rect x="100" y="74" width="16" height="32" rx="3" />
-        <rect x="92" y="82" width="32" height="16" rx="3" />
+        {/* Vertical Cross Bar */}
+        <rect x="83.5" y="70" width="17" height="52" rx="4.5" />
+        {/* Horizontal Cross Bar */}
+        <rect x="66" y="87.5" width="52" height="17" rx="4.5" />
       </g>
 
-      {/* Left Network Constellation Graph (4 nodes + connecting lines with pulse) */}
-      <g filter="url(#shadowFilter)">
-        {/* Connecting Lines with pulsating stroke */}
-        <line x1="18" y1="70" x2="48" y2="88" stroke="#00A859" strokeWidth="4.5" strokeLinecap="round" className={animated ? "line-pulse-animated" : ""} />
-        <line x1="28" y1="115" x2="48" y2="88" stroke="#00A859" strokeWidth="4.5" strokeLinecap="round" className={animated ? "line-pulse-animated" : ""} />
-        <line x1="12" y1="165" x2="28" y2="115" stroke="#00A859" strokeWidth="4.5" strokeLinecap="round" className={animated ? "line-pulse-animated" : ""} />
-        <line x1="48" y1="88" x2="65" y2="88" stroke="#FFCC00" strokeWidth="3.5" strokeLinecap="round" className={animated ? "line-pulse-animated" : ""} />
+      {/* Flowing Yellow National Ribbon along bottom curve */}
+      <path
+        d="M 28 148
+           C 50 148, 105 152, 150 120
+           C 155 116, 162 124, 156 132
+           C 125 168, 65 168, 28 158
+           Z"
+        fill="#FFCC00"
+      />
 
-        {/* Node Circles with pulsating waves */}
-        <circle cx="18" cy="70" r="10" fill="#00A859" className={animated ? "node-1-animated" : ""} />
-        <circle cx="48" cy="88" r="8" fill="#FFCC00" stroke="#00A859" strokeWidth="2" className={animated ? "node-2-animated" : ""} />
-        <circle cx="28" cy="115" r="9" fill="#00A859" className={animated ? "node-3-animated" : ""} />
-        <circle cx="12" cy="165" r="10" fill="#00A859" className={animated ? "node-4-animated" : ""} />
-      </g>
+      {/* Lower Green Ribbon */}
+      <path
+        d="M 28 158
+           C 65 168, 125 168, 156 132
+           C 160 138, 154 148, 146 155
+           C 118 180, 58 184, 28 172
+           Z"
+        fill="#006A4E"
+      />
 
-      {/* Bottom Togo Flag Ribbon curving on lower edge of P */}
-      <g filter="url(#shadowFilter)">
-        {/* Curved ribbon background */}
-        <path
-          d="M 45 150
-             C 65 150, 115 155, 145 125
-             C 152 118, 160 128, 150 138
-             C 115 178, 60 178, 38 158 Z"
-          fill="#006A4E"
-        />
+      {/* Red Canton Accent on Bottom Left (Togo Flag Element) */}
+      <path
+        d="M 28 144
+           L 38 144
+           L 38 168
+           L 28 168
+           Z"
+        fill="#ED1C24"
+      />
 
-        {/* Togo Canton Red square with White Star */}
-        <path
-          d="M 38 152
-             C 42 148, 55 148, 65 152
-             L 60 174
-             C 48 172, 40 166, 38 152 Z"
-          fill="#D21034"
-        />
-        {/* White Star with subtle twinkle */}
-        <polygon 
-          points="50,154 53,161 60,161 55,165 57,172 50,168 43,172 45,165 40,161 47,161" 
-          fill="#FFFFFF" 
-          className={animated ? "star-twinkle-animated" : ""}
-        />
-
-        {/* Yellow Stripe */}
-        <path
-          d="M 65 152
-             C 95 152, 125 148, 148 130
-             L 145 135
-             C 122 153, 92 158, 63 158 Z"
-          fill="#FFCE00"
-        />
-
-        {/* Green Stripe */}
-        <path
-          d="M 63 158
-             C 92 158, 122 153, 145 135
-             L 142 140
-             C 118 162, 88 168, 58 166 Z"
-          fill="#006A4E"
-        />
-      </g>
+      {/* Small White Star in Red Canton */}
+      <polygon
+        points="33,151 34.2,154.5 38,154.5 35,156.8 36.2,160.2 33,158 29.8,160.2 31,156.8 28,154.5 31.8,154.5"
+        fill="#FFFFFF"
+      />
     </svg>
   );
 };
-

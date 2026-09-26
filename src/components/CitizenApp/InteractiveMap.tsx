@@ -9,6 +9,9 @@ interface InteractiveMapProps {
   onSelectPharmacy: (p: Pharmacy) => void;
   centerLat?: number;
   centerLng?: number;
+  userLocation?: { lat: number; lng: number } | null;
+  onLocateUser?: () => void;
+  isFullView?: boolean;
 }
 
 export const InteractiveMap: React.FC<InteractiveMapProps> = ({
@@ -20,7 +23,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
 }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
-  const markersRef = useRef<{ [id: string]: L.Marker | L.CircleMarker }>({});
+  const markersRef = useRef<{ [id: string]: L.Marker }>({});
 
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -56,7 +59,7 @@ export const InteractiveMap: React.FC<InteractiveMapProps> = ({
     if (!map) return;
 
     // Clear previous markers
-    Object.values(markersRef.current).forEach((m: L.Marker | L.CircleMarker) => m.remove());
+    Object.values(markersRef.current).forEach((m: L.Marker) => m.remove());
     markersRef.current = {};
 
     pharmacies.forEach(p => {

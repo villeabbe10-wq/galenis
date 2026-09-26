@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Drug, Pharmacy, PharmacyDrugStock } from '../../types';
+import { getDrugPriceStats } from '../../utils/drugPriceHelper';
+import { GalenicPriceDisclaimer } from '../common/GalenicPriceDisclaimer';
 import { 
   Search, 
   Pill, 
@@ -14,7 +16,9 @@ import {
   ShieldCheck,
   Share2,
   Calculator,
-  Navigation
+  Navigation,
+  Scale,
+  Sparkles
 } from 'lucide-react';
 
 interface DrugAvailabilitySearchProps {
@@ -44,13 +48,19 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
 
   const activeDrug = selectedDrug || drugs[0];
 
-  const drugStockEntries = (stocks || []).filter(s => s.drugId === activeDrug?.id);
+  const drugStockEntries = useMemo(() => {
+    return (stocks || []).filter(s => s.drugId === activeDrug?.id);
+  }, [stocks, activeDrug]);
+
+  const priceStats = useMemo(() => {
+    return activeDrug ? getDrugPriceStats(activeDrug.id, stocks) : null;
+  }, [activeDrug, stocks]);
 
   const handleShareDrugAvailability = (pharma: Pharmacy, stock: PharmacyDrugStock) => {
     const text = `💊 *DISPONIBILITÉ MÉDICAMENT AU TOGO*\n` +
       `• *Médicament :* ${activeDrug.name} (DCI: ${activeDrug.dci})\n` +
       `• *Pharmacie :* ${pharma.name} (${pharma.city} - ${pharma.quarter})\n` +
-      `• *Prix officiel :* ${stock.priceFcfa.toLocaleString()} FCFA\n` +
+      `• *Prix indicatif officine :* ${stock.priceFcfa.toLocaleString()} FCFA (variable selon forme & laboratoire)\n` +
       `• *Téléphone :* ${pharma.phone}\n` +
       `• *Prise en charge estimée INAM (80%) :* ${Math.round(stock.priceFcfa * 0.8).toLocaleString()} FCFA (Reste à charge: ${Math.round(stock.priceFcfa * 0.2).toLocaleString()} FCFA)\n\n` +
       `_Vérifié sur Galenis Togo_`;
@@ -64,13 +74,13 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
         <div>
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-50 text-teal-800 border border-teal-200 mb-2">
             <Pill className="w-3.5 h-3.5 text-teal-600" />
-            <span>Médicaments & Prix officiels</span>
+            <span>Médicaments & Fourchettes de prix</span>
           </div>
           <h2 className="text-xl font-bold text-slate-900">
-            Disponibilité des médicaments
+            Disponibilité & Fourchettes des médicaments
           </h2>
           <p className="text-xs text-slate-600 mt-1">
-            Trouvez rapidement où acheter votre médicament au meilleur prix en FCFA.
+            Consultez les disponibilités en officine et les fourchettes de prix indicatives selon les formes galéniques.
           </p>
         </div>
 
@@ -121,44 +131,60 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
 
       {/* Selected Drug Info Banner */}
       {activeDrug && (
-        <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-xl p-4 my-2 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
-          <div>
-            <div className="flex items-center gap-2">
-              <h3 className="font-bold text-slate-900 text-sm">{activeDrug.name}</h3>
-              <span className="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[10px]">
-                DCI: {activeDrug.dci}
-              </span>
+        <div className="space-y-3 my-2">
+          <div className="bg-emerald-50/70 border border-emerald-200/80 rounded-2xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="font-extrabold text-slate-900 text-sm">{activeDrug.name}</h3>
+                <span className="bg-emerald-100 text-emerald-800 font-semibold px-2 py-0.5 rounded text-[10px]">
+                  DCI: {activeDrug.dci}
+                </span>
+                {priceStats && (
+                  <span className="bg-amber-100 text-amber-900 border border-amber-300 font-black px-2.5 py-0.5 rounded-lg text-[11px] shadow-2xs">
+                    Fourchette constatée : {priceStats.formattedRange}
+                  </span>
+                )}
+              </div>
+              <p className="text-slate-600 leading-relaxed">{activeDrug.description}</p>
             </div>
-            <p className="text-slate-600 mt-0.5">{activeDrug.description}</p>
-          </div>
-          <div className="flex items-center gap-2 shrink-0">
-            <div className="bg-white/90 border border-emerald-200 rounded-lg p-2 px-3 text-[11px] font-medium text-slate-700">
-              Catégorie : <strong>{activeDrug.category}</strong>
-            </div>
+            
+            <div className="flex items-center gap-2 shrink-0 flex-wrap">
+              <div className="bg-white/90 border border-emerald-200 rounded-xl p-2 px-3 text-[11px] font-medium text-slate-700">
+                Catégorie : <strong>{activeDrug.category}</strong>
+              </div>
 
-            {onOpenInsuranceSimulator && (
-              <button
-                onClick={() => onOpenInsuranceSimulator(activeDrug)}
-                className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-2 px-3 rounded-lg text-[11px] flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
-              >
-                <Calculator className="w-3.5 h-3.5" />
-                <span>Calculer ma part à payer</span>
-              </button>
-            )}
+              {onOpenInsuranceSimulator && (
+                <button
+                  onClick={() => onOpenInsuranceSimulator(activeDrug)}
+                  className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold p-2 px-3 rounded-xl text-[11px] flex items-center gap-1.5 shadow-2xs transition-colors cursor-pointer"
+                >
+                  <Calculator className="w-3.5 h-3.5" />
+                  <span>Calculer ma part à payer</span>
+                </button>
+              )}
+            </div>
           </div>
+
+          {/* Galenic & Price Variation Pedagogical Notice */}
+          <GalenicPriceDisclaimer stats={priceStats || undefined} />
         </div>
       )}
 
       {/* Availability Statuses Grid */}
       <div className="mt-6">
-        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
-          Pharmacies proposant ce médicament ({drugStockEntries.length} établissements répertoriés)
-        </h4>
+        <div className="flex items-center justify-between gap-2 mb-3">
+          <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            Pharmacies proposant ce produit ({drugStockEntries.length} établissements répertoriés)
+          </h4>
+          <span className="text-[11px] text-slate-500 font-medium">
+            Tarifs déclarés par les officines
+          </span>
+        </div>
 
         {drugStockEntries.length === 0 ? (
           <div className="p-8 text-center bg-slate-50 rounded-xl border border-slate-200 text-slate-500 text-xs">
             <AlertTriangle className="w-6 h-6 text-amber-500 mx-auto mb-2" />
-            Disponibilité non renseignée pour ce produit. Contactez directement les pharmacies par téléphone ou WhatsApp.
+            Disponibilité non renseignée pour ce produit. Contactez directement les pharmacies par téléphone.
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -194,7 +220,7 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
                       </div>
                     </div>
 
-                    {/* Stock status pill */}
+                    {/* Stock status & Price */}
                     <div className="text-right shrink-0">
                       {isAvailable ? (
                         <span className="inline-flex items-center gap-1 bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-full text-[11px] shadow-sm">
@@ -214,8 +240,13 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
                       )}
 
                       {isAvailable && (
-                        <div className="text-sm font-extrabold text-slate-900 mt-1">
-                          {stock.priceFcfa.toLocaleString()} FCFA
+                        <div className="mt-1">
+                          <div className="text-sm font-black text-slate-900">
+                            {stock.priceFcfa.toLocaleString()} FCFA
+                          </div>
+                          <div className="text-[10px] text-slate-600 font-medium">
+                            selon forme en stock
+                          </div>
                         </div>
                       )}
                     </div>
@@ -230,7 +261,7 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
                       <button
                         onClick={() => handleShareDrugAvailability(pharma, stock)}
                         className="bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200 px-2.5 py-1 rounded-lg font-semibold flex items-center gap-1 text-[11px] cursor-pointer"
-                        title="Partager cette disponibilité par WhatsApp"
+                        title="Partager cette disponibilité"
                       >
                         <Share2 className="w-3 h-3 text-teal-600" />
                         <span>Partager</span>
@@ -250,7 +281,7 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
                           target="_blank"
                           rel="noopener noreferrer"
                           className="bg-emerald-600 hover:bg-emerald-700 text-white px-2.5 py-1 rounded-lg font-bold flex items-center gap-1 text-[11px] shadow-xs cursor-pointer"
-                          title="Itinéraire GPS vers cette officine (Premier arrivé, premier servi)"
+                          title="Itinéraire GPS vers cette officine"
                         >
                           <Navigation className="w-3 h-3" />
                           <span>Itinéraire</span>
@@ -267,3 +298,4 @@ export const DrugAvailabilitySearch: React.FC<DrugAvailabilitySearchProps> = ({
     </div>
   );
 };
+

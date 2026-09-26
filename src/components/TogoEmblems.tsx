@@ -193,87 +193,333 @@ export const TogoMapOutline: React.FC<{ className?: string }> = ({ className = "
   );
 };
 
-export const TogoLionIcon: React.FC<{ className?: string; color?: string }> = ({ 
+export const TogoHealthEmblem: React.FC<{ className?: string; color?: string }> = ({ 
   className = "w-5 h-5",
-  color = "currentColor"
+  color = "#006a4e"
 }) => {
   return (
     <svg 
       viewBox="0 0 24 24" 
       fill="none" 
-      stroke={color} 
-      strokeWidth="1.8" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
       className={`inline-block shrink-0 ${className}`}
-      aria-label="Lion Emblème du Togo"
+      aria-label="Emblème Santé Togo"
     >
-      {/* Royal Mane Contour */}
-      <path 
-        d="M12 2.5C8.8 2.5 5 4.5 4.5 8.8C4 12.2 5.5 15.5 7 17.5C8.2 19.2 9.5 21 12 21.8C14.5 21 15.8 19.2 17 17.5C18.5 15.5 20 12.2 19.5 8.8C19 4.5 15.2 2.5 12 2.5Z" 
-        fill={color} 
-        fillOpacity="0.18" 
-      />
-      {/* Mane Radiating Strands */}
-      <path d="M12 2.5V4.8M8.2 3.8L9.6 5.8M15.8 3.8L14.4 5.8M4.5 8.8L7 9.8M19.5 8.8L17 9.8M4.8 13.5L7.2 13.5M19.2 13.5L16.8 13.5M7 17.5L9 16.5M17 17.5L15 16.5" />
-      {/* Ears */}
-      <path d="M6.8 6C5.8 5 4.5 5.5 4.5 7C4.5 8.2 5.5 8.8 6.5 8.8" />
-      <path d="M17.2 6C18.2 5 19.5 5.5 19.5 7C19.5 8.2 18.5 8.8 17.5 8.8" />
-      {/* Forehead & Eyebrows */}
-      <path d="M9.5 10C10.5 10.8 13.5 10.8 14.5 10" />
-      {/* Eyes */}
-      <circle cx="9.5" cy="9" r="0.8" fill={color} />
-      <circle cx="14.5" cy="9" r="0.8" fill={color} />
-      {/* Snout and Nose */}
-      <path d="M12 11.8L10.2 14H13.8L12 11.8Z" fill={color} />
-      <path d="M12 14V15.5M12 15.5C10.8 15.5 9.8 16.2 9.2 17.2M12 15.5C13.2 15.5 14.2 16.2 14.8 17.2" />
-      {/* Whisker Tufts */}
-      <path d="M8 15L5.5 14.5M8 16L5.5 16.5M16 15L18.5 14.5M16 16L18.5 16.5" />
+      <rect x="2" y="2" width="20" height="20" rx="6" fill="#006a4e" />
+      {/* Medical Cross */}
+      <path d="M12 6V18M6 12H18" stroke="#ffffff" strokeWidth="2.8" strokeLinecap="round" />
+      {/* Small Central Star */}
+      <circle cx="12" cy="12" r="2" fill="#ffce00" />
     </svg>
   );
 };
 
-export const TogoLionSolidIcon: React.FC<{ className?: string }> = ({ className = "w-6 h-6" }) => {
+import { LionIcon } from './LionIcon';
+export { LionIcon, TogoLionIcon, TogoLionSolidIcon } from './LionIcon';
+
+export const CamegTogoLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
   return (
-    <svg 
-      viewBox="0 0 100 100" 
-      fill="currentColor"
-      className={`inline-block shrink-0 ${className}`}
-      aria-label="Lion du Togo"
-    >
-      {/* Togolese Lion Royal Emblem Head */}
-      <g>
-        {/* Crown of Mane */}
-        <path d="M50,8 C32,8 18,18 14,35 C10,48 15,62 22,72 C28,80 38,90 50,94 C62,90 72,80 78,72 C85,62 90,48 86,35 C82,18 68,8 50,8 Z" opacity="0.25" />
+    <svg viewBox="0 0 160 110" className={`inline-block ${className}`} aria-label="Logo CAMEG TOGO">
+      <rect width="160" height="110" rx="12" fill="#ffffff" />
+      {/* Light green chalice / coupe d'Hygie */}
+      <path
+        d="M 18 42 Q 80 50 142 42 L 146 47 Q 80 62 86 78 L 74 78 Q 80 62 14 47 Z"
+        fill="#7ac47a"
+      />
+      {/* Chalice stem and base */}
+      <rect x="76" y="65" width="8" height="35" rx="3" fill="#7ac47a" />
+      <ellipse cx="80" cy="98" rx="30" ry="7" fill="#7ac47a" />
+
+      {/* Dark green large S-shaped snake winding around coupe */}
+      {/* Snake lower coils */}
+      <path
+        d="M 58 92 C 50 82 72 74 96 82 C 112 88 108 98 84 98 C 65 98 56 88 78 76 C 96 66 102 52 86 42"
+        fill="none"
+        stroke="#0c541c"
+        strokeWidth="11"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {/* Snake upper head S-curve */}
+      <path
+        d="M 86 44 C 70 34 58 20 68 10 C 80 -1 100 2 92 24 L 84 28"
+        fill="none"
+        stroke="#0c541c"
+        strokeWidth="11"
+        strokeLinecap="round"
+      />
+      {/* Snake arrow head */}
+      <polygon points="86,18 96,28 76,28" fill="#0c541c" transform="rotate(-35 86 24)" />
+
+      {/* Text CAMEG on left */}
+      <text x="24" y="38" fill="#0c541c" fontSize="19" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">
+        CAMEG
+      </text>
+
+      {/* Text TOGO on right */}
+      <text x="104" y="38" fill="#0c541c" fontSize="19" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">
+        TOGO
+      </text>
+    </svg>
+  );
+};
+
+export const UbipharmLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 140 120" className={`inline-block ${className}`} aria-label="Logo UbiPharm">
+      {/* Solid Dark Navy Background */}
+      <rect width="140" height="120" rx="14" fill="#001833" />
+      
+      {/* White Stylized 'UP' Cross Symbol */}
+      <g transform="translate(48, 12)">
+        {/* Top-left cross bar */}
+        <rect x="0" y="8" width="16" height="12" fill="#ffffff" />
+        <rect x="8" y="0" width="12" height="16" fill="#ffffff" />
         
-        {/* Mane Tuft spikes */}
-        <path d="M50,5 L54,16 L50,14 L46,16 Z M33,12 L41,20 L37,21 L30,17 Z M67,12 L70,17 L63,21 L59,20 Z M19,25 L28,31 L24,34 L17,29 Z M81,25 L83,29 L76,34 L72,31 Z M12,42 L22,44 L19,48 L11,46 Z M88,42 L89,46 L81,48 L78,44 Z M13,60 L23,59 L21,63 L14,64 Z M87,60 L86,64 L79,63 L77,59 Z M22,76 L31,71 L30,76 L24,80 Z M78,76 L76,80 L70,76 L69,71 Z" />
-        
-        {/* Ears */}
-        <path d="M25,24 C20,20 15,26 17,32 C19,38 25,38 27,34 Z M75,24 C73,34 79,38 81,32 C83,26 78,20 73,24 Z" />
-        
-        {/* Head Base */}
-        <path d="M50,22 C37,22 28,32 28,47 C28,62 38,76 50,82 C62,76 72,62 72,47 C72,32 63,22 50,22 Z" />
-        
-        {/* Eyes (Cutout / contrast) */}
-        <ellipse cx="40" cy="44" rx="4" ry="2.5" fill="#FFFFFF" />
-        <circle cx="40" cy="44" r="1.5" fill="#000000" />
-        <ellipse cx="60" cy="44" rx="4" ry="2.5" fill="#FFFFFF" />
-        <circle cx="60" cy="44" r="1.5" fill="#000000" />
-        
-        {/* Forehead furrow */}
-        <path d="M46,32 L50,38 L54,32" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" fill="none" />
-        
-        {/* Nose and Muzzle */}
-        <polygon points="50,52 42,60 58,60" fill="#FFFFFF" />
-        <path d="M50,60 L50,67 M50,67 C44,67 40,71 38,75 M50,67 C56,67 60,71 62,75" stroke="#FFFFFF" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-        
-        {/* Whiskers */}
-        <line x1="34" y1="64" x2="22" y2="61" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1="34" y1="68" x2="20" y2="69" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1="66" y1="64" x2="78" y2="61" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
-        <line x1="66" y1="68" x2="80" y2="69" stroke="#FFFFFF" strokeWidth="1.5" strokeLinecap="round" />
+        {/* Main P / U Loop */}
+        <path
+          d="M 20 8 C 34 8 44 16 44 28 C 44 40 34 46 20 46 L 20 28 L 30 28 C 34 28 36 26 36 24 C 36 20 32 18 28 18 L 16 18 L 16 38 C 16 50 4 50 0 44 L 0 32 C 4 36 8 36 8 30 L 8 8 Z"
+          fill="#ffffff"
+        />
       </g>
+
+      {/* Brand Typography: UbiPharm */}
+      <text x="70" y="96" textAnchor="middle" fill="#ffffff" fontSize="21" fontWeight="800" fontFamily="system-ui, -apple-system, sans-serif" letterSpacing="-0.3">
+        UbiPharm
+      </text>
+    </svg>
+  );
+};
+
+export const InamLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 120 135" className={`inline-block ${className}`} aria-label="Logo INAM Togo">
+      <rect width="120" height="135" rx="12" fill="#f8fafc" />
+      
+      {/* Top INAM Tall Green Typography */}
+      <g transform="translate(18, 6)">
+        {/* I */}
+        <rect x="6" y="2" width="11" height="42" fill="#006a38" />
+        {/* N */}
+        <path d="M 23 2 L 34 2 L 48 34 L 48 2 L 57 2 L 57 44 L 46 44 L 32 12 L 32 44 L 23 44 Z" fill="#006a38" />
+        {/* A */}
+        <path d="M 64 44 L 74 2 L 84 2 L 94 44 L 84 44 L 81 32 L 69 32 L 66 44 Z M 71 24 L 79 24 L 75 9 Z" fill="#006a38" transform="translate(-5, 0)" />
+        {/* M */}
+        <path d="M 84 44 L 84 2 L 95 2 L 102 24 L 109 2 L 120 2 L 120 44 L 111 44 L 111 14 L 104 34 L 100 34 L 93 14 L 93 44 Z" fill="#006a38" transform="translate(-16, 0)" />
+      </g>
+
+      {/* Arch Outline */}
+      <path d="M 22 56 Q 60 28 98 56" fill="none" stroke="#e2e8f0" strokeWidth="1.5" />
+
+      {/* Center 3 Family Silhouette Figures */}
+      <g transform="translate(30, 42)">
+        {/* Left Green Figure (Parent 1) */}
+        <circle cx="16" cy="18" r="8" fill="#008751" />
+        <rect x="8" y="27" width="16" height="34" rx="8" fill="#008751" />
+
+        {/* Right Red Figure (Parent 2) */}
+        <circle cx="44" cy="18" r="8" fill="#d32f2f" />
+        <rect x="36" y="27" width="16" height="34" rx="8" fill="#d32f2f" />
+
+        {/* Center Yellow Figure (Child) */}
+        <circle cx="30" cy="27" r="7" fill="#ffd100" />
+        <rect x="23" y="34" width="14" height="28" rx="7" fill="#ffd100" />
+
+        {/* Text TOGO across chest */}
+        <text x="30" y="47" textAnchor="middle" fill="#000000" fontSize="8" fontWeight="900" fontFamily="sans-serif">
+          TOGO
+        </text>
+      </g>
+
+      {/* Slogan curved: se soigner n'est plus un souci */}
+      <path id="inam-slogan-arc" d="M 14 68 A 48 48 0 0 0 106 68" fill="none" />
+      <text fill="#006a38" fontSize="6.5" fontWeight="700" fontFamily="sans-serif">
+        <textPath href="#inam-slogan-arc" startOffset="50%" textAnchor="middle">
+          se soigner n'est plus un souci
+        </textPath>
+      </text>
+    </svg>
+  );
+};
+
+export const AmuLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 160 110" className={`inline-block ${className}`} aria-label="Logo AMU Togo">
+      {/* Light Yellow/Cream Oval Background */}
+      <ellipse cx="80" cy="55" rx="76" ry="50" fill="#feeaa5" stroke="#fcd34d" strokeWidth="1.5" />
+      
+      {/* Large Navy Bold AMU */}
+      <text x="80" y="66" textAnchor="middle" fill="#094080" fontSize="48" fontWeight="900" fontFamily="system-ui, -apple-system, sans-serif" letterSpacing="-1">
+        AMU
+      </text>
+
+      {/* Subtitle: Assurance Maladie Universelle */}
+      <text x="80" y="86" textAnchor="middle" fill="#094080" fontSize="7.8" fontWeight="700" fontFamily="sans-serif">
+        Assurance Maladie Universelle
+      </text>
+    </svg>
+  );
+};
+
+export const TedisPharmaLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 180 115" className={`inline-block ${className}`} aria-label="Logo TEDIS Pharma TG">
+      {/* Light Gray Metallic Background */}
+      <rect width="180" height="115" rx="12" fill="#e5e7eb" />
+      
+      <g transform="translate(18, 20)">
+        {/* T */}
+        <path d="M 0 35 L 0 0 L 26 0 L 26 10 L 16 10 L 16 35 Z" fill="none" stroke="#374151" strokeWidth="2.5" />
+        
+        {/* E */}
+        <path d="M 28 35 L 28 0 L 50 0 L 50 9 L 38 9 L 38 14 L 47 14 L 47 21 L 38 21 L 38 26 L 50 26 L 50 35 Z" fill="none" stroke="#374151" strokeWidth="2.5" />
+        
+        {/* D with Arrow shape inside */}
+        <path d="M 52 35 L 52 0 C 72 0 80 10 80 18 C 80 27 72 35 52 35 Z M 62 9 L 62 26 L 70 18 Z" fill="none" stroke="#374151" strokeWidth="2.5" />
+        
+        {/* I with Red Dot */}
+        <circle cx="89" cy="-7" r="5.5" fill="#dc2626" />
+        <rect x="84" y="0" width="10" height="35" rx="2" fill="none" stroke="#374151" strokeWidth="2.5" />
+        
+        {/* S */}
+        <path d="M 120 8 C 117 2 107 0 102 3 C 97 6 97 12 101 15 L 115 19 C 122 21 123 29 119 33 C 114 37 101 37 97 31" fill="none" stroke="#374151" strokeWidth="2.5" strokeLinecap="round" />
+
+        {/* Connecting Baseline & PHARMA TG */}
+        <path d="M 0 35 L 0 48 L 74 48" fill="none" stroke="#374151" strokeWidth="2.2" />
+        <text x="78" y="52" fill="#374151" fontSize="13" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.6">
+          PHARMA TG
+        </text>
+      </g>
+    </svg>
+  );
+};
+
+export const SapeursPompiersTogoLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 130 145" className={`inline-block ${className}`} aria-label="Logo BSPT Sapeurs-Pompiers Togo 118">
+      {/* Crossed Fire Axes (Handles & Blades) */}
+      {/* Left Axe */}
+      <line x1="40" y1="12" x2="88" y2="132" stroke="#b08968" strokeWidth="4.5" strokeLinecap="round" />
+      <path d="M 36 20 L 14 22 L 14 14 L 38 12 L 40 26 Z" fill="#1e293b" />
+      
+      {/* Right Axe */}
+      <line x1="90" y1="12" x2="42" y2="132" stroke="#b08968" strokeWidth="4.5" strokeLinecap="round" />
+      <path d="M 94 20 L 116 22 L 116 14 L 92 12 L 90 26 Z" fill="#1e293b" />
+
+      {/* Main Shield Outline (Brown Border with Courage & Devouement) */}
+      <path
+        d="M 18 36 L 112 36 L 110 82 C 108 106 65 128 65 128 C 65 128 22 106 20 82 Z"
+        fill="#3e2316"
+        stroke="#1e293b"
+        strokeWidth="1.5"
+      />
+
+      {/* Top Banner BSPT */}
+      <rect x="18" y="10" width="94" height="24" rx="2" fill="#ffffff" stroke="#1e293b" strokeWidth="1.5" />
+      <text x="65" y="28" textAnchor="middle" fill="#000000" fontSize="16" fontWeight="900" fontFamily="sans-serif" letterSpacing="2">
+        BSPT
+      </text>
+
+      {/* Inner Shield (Togo Stripes) */}
+      <g transform="translate(4, 3)">
+        <path
+          d="M 22 36 L 100 36 L 98 78 C 96 98 61 116 61 116 C 61 116 26 98 24 78 Z"
+          fill="#008751"
+        />
+        {/* Yellow Stripe */}
+        <rect x="24" y="52" width="74" height="16" fill="#ffd100" />
+      </g>
+
+      {/* Brown Border Text: COURAGE ET DEVOUEMENT */}
+      <path id="bspt-left-arc" d="M 24 46 L 24 82 C 24 94 40 108 52 118" fill="none" />
+      <text fill="#ffffff" fontSize="6.5" fontWeight="900" fontFamily="sans-serif">
+        <textPath href="#bspt-left-arc" startOffset="10%">
+          COURAGE
+        </textPath>
+      </text>
+      
+      <path id="bspt-right-arc" d="M 106 46 L 106 82 C 106 94 90 108 78 118" fill="none" />
+      <text fill="#ffffff" fontSize="6.2" fontWeight="900" fontFamily="sans-serif">
+        <textPath href="#bspt-right-arc" startOffset="10%">
+          DEVOUEMENT
+        </textPath>
+      </text>
+
+      {/* Center Flame (Red jagged) */}
+      <path
+        d="M 65 38 L 76 46 L 86 42 L 88 56 L 98 58 L 90 74 L 65 96 L 40 74 L 32 58 L 42 56 L 44 42 L 54 46 Z"
+        fill="#dc2626"
+      />
+
+      {/* White Phone & 118 Center Badge */}
+      <g transform="translate(42, 50)">
+        {/* Phone Handset */}
+        <path d="M 8 3 C 2 3 0 9 2 15 C 4 21 10 23 14 23 C 12 19 10 18 7 19 C 5 17 5 14 6 12 C 9 13 11 11 11 7 C 11 3 9 3 8 3 Z" fill="#ffffff" />
+        {/* 118 */}
+        <text x="26" y="19" textAnchor="middle" fill="#ffffff" fontSize="18" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">
+          118
+        </text>
+      </g>
+
+      {/* Black Box with TOGO */}
+      <rect x="42" y="80" width="46" height="15" rx="3" fill="#000000" />
+      <text x="65" y="91" textAnchor="middle" fill="#ffffff" fontSize="9.5" fontWeight="900" fontFamily="sans-serif" letterSpacing="1">
+        TOGO
+      </text>
+    </svg>
+  );
+};
+
+export const CopharmaLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 100 100" className={`inline-block ${className}`} aria-label="Logo COPHARMA Togo">
+      <rect width="94" height="94" x="3" y="3" rx="20" fill="#064e3b" />
+      <circle cx="50" cy="44" r="28" fill="#ffffff" />
+      <circle cx="50" cy="44" r="24" fill="none" stroke="#006a4e" strokeWidth="2" />
+      <path d="M 40 40 Q 50 48 60 40 Z" fill="#006a4e" />
+      <rect x="48" y="40" width="4" height="18" fill="#006a4e" />
+      <ellipse cx="50" cy="58" rx="8" ry="2" fill="#006a4e" />
+      <circle cx="50" cy="30" r="4" fill="#d21034" />
+      <polygon points="50,22 52,26 56,26 53,28 54,32 50,30 46,32 47,28 44,26 48,26" fill="#ffce00" />
+      <text x="50" y="86" textAnchor="middle" fill="#ffffff" fontSize="7.5" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">
+        COPHARMA
+      </text>
+    </svg>
+  );
+};
+
+export const UniphartLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 100 100" className={`inline-block ${className}`} aria-label="Logo UNIPHART Togo">
+      <rect width="94" height="94" x="3" y="3" rx="20" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
+      <path
+        d="M 30 20 L 42 20 L 42 46 C 42 54 58 54 58 46 L 58 20 L 70 20 L 70 48 C 70 66 30 66 30 48 Z"
+        fill="#047857"
+      />
+      <rect x="45" y="30" width="10" height="24" rx="2" fill="#10b981" />
+      <rect x="38" y="37" width="24" height="10" rx="2" fill="#10b981" />
+      <text x="50" y="86" textAnchor="middle" fill="#047857" fontSize="8" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.8">
+        UNIPHART
+      </text>
+    </svg>
+  );
+};
+
+export const MshpTogoLogo: React.FC<{ className?: string }> = ({ className = "w-10 h-10" }) => {
+  return (
+    <svg viewBox="0 0 100 100" className={`inline-block ${className}`} aria-label="Ministère de la Santé Togo">
+      <rect width="94" height="94" x="3" y="3" rx="20" fill="#ffffff" stroke="#e2e8f0" strokeWidth="2" />
+      <g transform="translate(18, 12) scale(0.64)">
+        <circle cx="50" cy="50" r="46" fill="#006a4e" />
+        <circle cx="50" cy="50" r="38" fill="#ffffff" />
+        <path d="M 35 48 Q 50 56 65 48 Z" fill="#006a4e" />
+        <rect x="48" y="38" width="4" height="30" fill="#006a4e" />
+        <ellipse cx="50" cy="68" rx="14" ry="4" fill="#006a4e" />
+        <circle cx="50" cy="28" r="8" fill="#d21034" />
+        <polygon points="50,22 52,26 56,26 53,28 54,32 50,30 46,32 47,28 44,26 48,26" fill="#ffffff" />
+      </g>
+      <text x="50" y="86" textAnchor="middle" fill="#006a4e" fontSize="7" fontWeight="900" fontFamily="sans-serif" letterSpacing="0.5">
+        MSHP TOGO
+      </text>
     </svg>
   );
 };

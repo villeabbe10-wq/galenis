@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TogoFlag, TogoCoatOfArms, ONPTLogo, TogoLionIcon } from './TogoEmblems';
+import { TogoFlag, TogoCoatOfArms, ONPTLogo } from './TogoEmblems';
 import { PartnerMarquee } from './PartnerMarquee';
 import { ActiveTab } from '../types';
 import footerBgImage from '../assets/images/pharmacy_header_bg_1786197240812.jpg';
@@ -215,9 +215,9 @@ export const Footer: React.FC<FooterProps> = ({ activeTab, setActiveTab, onOpenF
                   <button 
                     onClick={() => onOpenFeedback('FORM')} 
                     className="hover:text-emerald-700 text-[#00A878] font-black transition-colors flex items-center gap-1.5 cursor-pointer bg-emerald-50 hover:bg-emerald-100 px-2 py-1 rounded-lg border border-emerald-200 mt-1"
-                    title="Donner votre avis ou proposer une idée (Lion du Togo)"
+                    title="Donner votre avis ou proposer une idée"
                   >
-                    <TogoLionIcon className="w-3.5 h-3.5 text-[#00A878]" />
+                    <MessageSquareHeart className="w-3.5 h-3.5 text-[#00A878]" />
                     <span>Donner mon avis sur l'application</span>
                   </button>
                 </li>
@@ -426,7 +426,7 @@ export const Footer: React.FC<FooterProps> = ({ activeTab, setActiveTab, onOpenF
                   }}
                   className="w-full sm:w-auto px-4 py-2 rounded-xl bg-slate-100 hover:bg-emerald-50 text-slate-800 hover:text-emerald-800 font-bold text-xs border border-slate-200 transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
                 >
-                  <TogoLionIcon className="w-3.5 h-3.5 text-emerald-600" />
+                  <FileText className="w-3.5 h-3.5 text-emerald-600" />
                   <span>Ouvrir la page officielle détaillée</span>
                 </button>
               )}

@@ -28,9 +28,10 @@ import {
   Layers,
   ArrowRight,
   ShieldCheck,
-  Award
+  Award,
+  MessageSquareHeart
 } from 'lucide-react';
-import { TogoFlag, TogoLionIcon } from '../TogoEmblems';
+import { TogoFlag } from '../TogoEmblems';
 
 interface AppFeedbackModalProps {
   isOpen: boolean;
@@ -159,7 +160,7 @@ export const AppFeedbackModal: React.FC<AppFeedbackModalProps> = ({
               <div className="flex items-start justify-between relative z-10">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 flex items-center justify-center shadow-xs shrink-0">
-                    <TogoLionIcon className="w-6 h-6 text-emerald-700" />
+                    <MessageSquareHeart className="w-6 h-6 text-emerald-700" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">

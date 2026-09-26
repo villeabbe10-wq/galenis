@@ -25,6 +25,8 @@ const LegalSpaceView = lazy(() => import('./components/LegalPages/LegalSpaceView
 import { TogoHeritageGallery } from './components/TogoHeritageGallery';
 import { AppFeedbackModal } from './components/AppFeedback/AppFeedbackModal';
 import { DashboardFaqModal, FaqAudience } from './components/common/DashboardFaqModal';
+import { GuardNotificationModal } from './components/Notifications/GuardNotificationModal';
+import { InAppPushBanner } from './components/Notifications/InAppPushBanner';
 import { ProtectedAuthGate } from './components/common/ProtectedAuthGate';
 import { PharmacyUiverseLoader } from './components/common/PharmacyUiverseLoader';
 import { TogoLionIcon } from './components/TogoEmblems';
@@ -78,6 +80,9 @@ export default function App() {
 
   // Dedicated Legal Section state
   const [legalSection, setLegalSection] = useState<LegalSectionType>('TERMS');
+
+  // Real-time Guard Push Notifications Modal State
+  const [isGuardNotifModalOpen, setIsGuardNotifModalOpen] = useState(false);
 
   // Interactive Strict Role-Restricted FAQ Modal State
   const [isFaqModalOpen, setIsFaqModalOpen] = useState(false);
@@ -232,8 +237,16 @@ export default function App() {
         previousTabTitle={previousTabTitle}
         onOpenFeedback={handleOpenFeedback}
         onOpenFaq={handleOpenFaq}
+        onOpenGuardNotifications={() => setIsGuardNotifModalOpen(true)}
         currentUser={currentUser}
         onLogout={handleLogout}
+      />
+
+      {/* Real-time Local In-App Push Banner */}
+      <InAppPushBanner 
+        onSelectPharmacy={(pharmacy) => {
+          navigateToTab('CITIZEN');
+        }} 
       />
 
       {/* Main Container View Area */}
@@ -486,6 +499,15 @@ export default function App() {
           </span>
         </button>
       </div>
+
+      {/* Real-time Push Guard Notifications Center Modal */}
+      <GuardNotificationModal
+        isOpen={isGuardNotifModalOpen}
+        onClose={() => setIsGuardNotifModalOpen(false)}
+        onSelectPharmacy={(pharmacy) => {
+          navigateToTab('CITIZEN');
+        }}
+      />
 
       {/* Global App Feedback & Suggestions Modal */}
       <AppFeedbackModal

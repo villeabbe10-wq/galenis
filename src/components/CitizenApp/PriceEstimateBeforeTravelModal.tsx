@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Pharmacy, Drug, PharmacyDrugStock } from '../../types';
 import { TogoFlag, TogoLionIcon } from '../TogoEmblems';
+import { GalenicPriceDisclaimer } from '../common/GalenicPriceDisclaimer';
 import { 
   X, 
   Calculator, 
@@ -345,6 +346,8 @@ export const PriceEstimateBeforeTravelModal: React.FC<PriceEstimateBeforeTravelM
                 </span>
               )}
             </div>
+
+            <GalenicPriceDisclaimer compact />
 
             {estimateItems.length === 0 ? (
               <div className="p-6 bg-slate-50 border border-slate-200 rounded-2xl text-center text-slate-500">

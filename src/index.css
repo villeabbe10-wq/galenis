@@ -197,10 +197,25 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .animate-marquee {
   display: flex;
   width: max-content;
   animation: marquee 35s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee-reverse 35s linear infinite;
 }
 
 .animation-paused {

@@ -12,12 +12,14 @@ import { DrugAvailabilitySearch } from './DrugAvailabilitySearch';
 import { TogoNetworkMap } from './TogoNetworkMap';
 import { PartnerMarquee } from '../PartnerMarquee';
 import { TogoFlag, TogoLionIcon } from '../TogoEmblems';
+import { GalenicPriceDisclaimer } from '../common/GalenicPriceDisclaimer';
 import { TOGO_CITIES } from '../../data/mockPharmacies';
 import { calculateDistanceKm, getSanitaryAlerts } from '../../services/pharmacyStorage';
 import { PharmacyUiverseLoader } from '../common/PharmacyUiverseLoader';
 import { SponsoredAdBanner } from '../common/SponsoredAdBanner';
 import { NewReportModal } from '../CommunityVigilance/NewReportModal';
 import { NewReviewModal } from '../CommunityVigilance/NewReviewModal';
+import { GuardNotificationModal } from '../Notifications/GuardNotificationModal';
 import headerBgImage from '../../assets/images/pharmacy_header_bg_1786197240812.jpg';
 import galenisMascotImg from '../../assets/images/galenis_assistant_mascot.jpg';
 import { 
@@ -46,7 +48,8 @@ import {
   Info,
   Bot,
   Lock,
-  Calculator
+  Calculator,
+  BellRing
 } from 'lucide-react';
 
 interface CitizenViewProps {
@@ -88,6 +91,7 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
   const [showEmergencyShareGuide, setShowEmergencyShareGuide] = useState<boolean>(false);
   const [estimatePharmacy, setEstimatePharmacy] = useState<Pharmacy | null>(null);
   const [isPriceEstimatorOpen, setIsPriceEstimatorOpen] = useState<boolean>(false);
+  const [isLocalGuardModalOpen, setIsLocalGuardModalOpen] = useState<boolean>(false);
 
   const activeAlerts = (getSanitaryAlerts() || []).filter(a => a.status === 'ACTIVE');
   const topCriticalAlert = activeAlerts.find(a => a.severity === 'CRITIQUE') || activeAlerts[0];
@@ -476,6 +480,10 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
               {drugSearchQuery.trim() !== '' && (
                 <div className="mt-4 pt-3 border-t border-slate-100 space-y-3 animate-fadeIn">
                   <SponsoredAdBanner placement="DRUG_SEARCH" compact />
+                  
+                  {/* Fourchette et explication de variation de prix selon forme galénique */}
+                  <GalenicPriceDisclaimer compact />
+
                   <div className="flex items-center justify-between text-xs">
                     <span className="font-extrabold text-emerald-700">
                       Résultats pour "{drugSearchQuery}" ({pharmaciesWithDrug.length} pharmacies en stock)
@@ -650,6 +658,15 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
                 <CreditCard className={`w-3.5 h-3.5 stroke-[2.25] ${filterMobilePay ? "text-white" : "text-slate-600"}`} />
                 <span>Paiement Mobile (T-Money / Flooz)</span>
               </button>
+
+              <button
+                onClick={() => setIsLocalGuardModalOpen(true)}
+                className="px-3.5 py-1.5 rounded-full font-bold bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs flex items-center gap-1.5 cursor-pointer transition-all ml-auto"
+                title="Gérer les notifications push de garde en direct"
+              >
+                <BellRing className="w-3.5 h-3.5 text-amber-600 animate-pulse" />
+                <span>Alertes Push Garde</span>
+              </button>
             </div>
           </div>
         </div>
@@ -713,6 +730,8 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
                 pharmacies={filteredPharmacies}
                 selectedPharmacy={detailPharmacy}
                 onSelectPharmacy={(p) => setDetailPharmacy(p)}
+                userLocation={userLocation}
+                onLocateUser={handleLocateUser}
               />
             </div>
           </div>
@@ -746,6 +765,9 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
             pharmacies={filteredPharmacies}
             selectedPharmacy={detailPharmacy}
             onSelectPharmacy={(p) => setDetailPharmacy(p)}
+            userLocation={userLocation}
+            onLocateUser={handleLocateUser}
+            isFullView={true}
           />
         )}
 
@@ -850,6 +872,12 @@ export const CitizenView: React.FC<CitizenViewProps> = ({
             onClose={() => setIsInsuranceModalOpen(false)}
             drugs={drugs}
             preselectedDrug={insuranceDrug || undefined}
+          />
+
+          <GuardNotificationModal
+            isOpen={isLocalGuardModalOpen}
+            onClose={() => setIsLocalGuardModalOpen(false)}
+            onSelectPharmacy={(p) => setDetailPharmacy(p)}
           />
         </>,
         document.body

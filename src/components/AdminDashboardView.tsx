@@ -87,6 +87,7 @@ import {
   DeveloperAccreditationDossier
 } from '../types';
 import { DeveloperDossierReviewModal } from './AdminDashboard/DeveloperDossierReviewModal';
+import { DrugDemandAnalyticsView } from './AdminDashboard/DrugDemandAnalyticsView';
 
 interface AdminDashboardViewProps {
   onLogout: () => void;
@@ -96,7 +97,7 @@ interface AdminDashboardViewProps {
 }
 
 export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onLogout, onRefreshData, role, onOpenFaq }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'live_radar' | 'user_needs' | 'roles' | 'audit' | 'data' | 'billing' | 'revenue' | 'monetization'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'live_radar' | 'drug_analytics' | 'user_needs' | 'roles' | 'audit' | 'data' | 'billing' | 'revenue' | 'monetization'>('overview');
   const [toastMessage, setToastMessage] = useState('');
 
   // Developer Accreditation Dossiers State (Synced with ApiPortal & Storage)
@@ -549,6 +550,23 @@ export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onLogout
         </button>
 
         <button
+          onClick={() => setActiveTab('drug_analytics')}
+          className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all cursor-pointer ${
+            activeTab === 'drug_analytics'
+              ? 'bg-emerald-700 text-white shadow-xs'
+              : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+          }`}
+        >
+          <Pill className="w-4 h-4 text-[#00A859]" />
+          <span>Analyse de la Demande</span>
+          <span className={`px-1.5 py-0.5 rounded text-[10px] font-black ${
+            activeTab === 'drug_analytics' ? 'bg-white text-emerald-800' : 'bg-emerald-100 text-emerald-800'
+          }`}>
+            Recharts
+          </span>
+        </button>
+
+        <button
           onClick={() => setActiveTab('user_needs')}
           className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm whitespace-nowrap transition-all cursor-pointer ${
             activeTab === 'user_needs'
@@ -965,6 +983,11 @@ export const AdminDashboardView: React.FC<AdminDashboardViewProps> = ({ onLogout
             </div>
           </div>
         </div>
+      )}
+
+      {/* 2.5 RECHARTS DRUG DEMAND ANALYTICS */}
+      {activeTab === 'drug_analytics' && (
+        <DrugDemandAnalyticsView />
       )}
 
       {/* 3. USER NEEDS & DEMAND ANALYTICS — "Ce dont les utilisateurs ont besoin" */}

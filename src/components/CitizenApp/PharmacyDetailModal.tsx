@@ -3,6 +3,7 @@ import { Pharmacy, PharmacyDrugStock, Drug } from '../../types';
 import { getPharmacyReviews } from '../../services/pharmacyStorage';
 import { ShareModal } from './ShareModal';
 import { TogoLionIcon } from '../TogoEmblems';
+import { GalenicPriceDisclaimer } from '../common/GalenicPriceDisclaimer';
 import { 
   X, 
   Phone, 
@@ -371,15 +372,15 @@ export const PharmacyDetailModal: React.FC<PharmacyDetailModalProps> = ({
           </div>
 
           {/* Essential Molecules Availability & Price List */}
-          <div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+          <div className="space-y-3">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
                 <h3 className="font-bold text-slate-900 text-sm flex items-center gap-1.5">
                   <Pill className="w-4 h-4 text-emerald-600" />
-                  <span>Médicaments & Prix officiels dans cette pharmacie</span>
+                  <span>Médicaments & Tarifs déclarés dans cette pharmacie</span>
                 </h3>
                 <p className="text-[11px] text-slate-500 mt-0.5">
-                  Prix unitaires homologués en FCFA avant application de votre assurance santé.
+                  Prix unitaires en FCFA selon la forme et le laboratoire disponible en officine.
                 </p>
               </div>
 
@@ -394,6 +395,8 @@ export const PharmacyDetailModal: React.FC<PharmacyDetailModalProps> = ({
                 </button>
               )}
             </div>
+
+            <GalenicPriceDisclaimer compact />
 
             {pharmacyStocks.length === 0 ? (
               <p className="text-slate-500 italic bg-slate-50 p-3 rounded-lg border border-slate-200">

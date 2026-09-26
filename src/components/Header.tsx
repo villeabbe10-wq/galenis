@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ActiveTab, UserSession } from '../types';
-import { TogoFlag, TogoLionIcon } from './TogoEmblems';
+import { TogoFlag } from './TogoEmblems';
 import { GalenisLogo } from './GalenisLogo';
 import { TraceabilityContextBand } from './TraceabilityContextBand';
 import headerBgImage from '../assets/images/pharmacy_header_banner_1787408881227.jpg';
@@ -25,8 +25,10 @@ import {
   LogOut,
   ExternalLink,
   Shield,
-  Sparkles
+  MessageSquareHeart,
+  BellRing
 } from 'lucide-react';
+import { getNotificationHistory } from '../services/notificationService';
 
 interface HeaderProps {
   activeTab: ActiveTab;
@@ -42,6 +44,7 @@ interface HeaderProps {
   previousTabTitle?: string;
   onOpenFeedback?: (initialTab?: 'FORM' | 'LIST' | 'ROADMAP') => void;
   onOpenFaq?: (audience?: 'PHARMACY' | 'DEVELOPER' | 'ADMIN' | 'CITIZEN') => void;
+  onOpenGuardNotifications?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -57,10 +60,26 @@ export const Header: React.FC<HeaderProps> = ({
   goBack,
   previousTabTitle,
   onOpenFeedback,
-  onOpenFaq
+  onOpenFaq,
+  onOpenGuardNotifications
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [unreadNotifsCount, setUnreadNotifsCount] = useState<number>(() => {
+    return getNotificationHistory().filter(n => !n.read).length;
+  });
   const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleNotifUpdate = () => {
+      setUnreadNotifsCount(getNotificationHistory().filter(n => !n.read).length);
+    };
+    window.addEventListener('galenis_push_history_updated', handleNotifUpdate);
+    window.addEventListener('galenis_in_app_push_alert', handleNotifUpdate);
+    return () => {
+      window.removeEventListener('galenis_push_history_updated', handleNotifUpdate);
+      window.removeEventListener('galenis_in_app_push_alert', handleNotifUpdate);
+    };
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -119,9 +138,9 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 onClick={() => onOpenFeedback('FORM')}
                 className="hidden sm:inline-flex items-center gap-1.5 text-[11px] text-slate-700 hover:text-emerald-700 font-bold bg-white hover:bg-emerald-50/50 border border-slate-200/80 px-2.5 py-0.5 rounded-full transition-all shadow-2xs ml-1 cursor-pointer"
-                title="Donner votre avis ou suggérer une amélioration sur l'application (Lion du Togo)"
+                title="Donner votre avis ou suggérer une amélioration sur l'application"
               >
-                <TogoLionIcon className="w-3.5 h-3.5 text-emerald-600" />
+                <MessageSquareHeart className="w-3.5 h-3.5 text-emerald-600" />
                 <span>Améliorer l'app</span>
               </button>
             )}
@@ -157,6 +176,22 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Emergency Guard Bento badge & Feedback action - Far Right */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            {/* Push Notifications Bell Button */}
+            {onOpenGuardNotifications && (
+              <button
+                onClick={onOpenGuardNotifications}
+                className="relative p-2 rounded-2xl bg-white/90 hover:bg-amber-50/80 text-slate-700 hover:text-amber-900 border border-slate-200/90 hover:border-amber-300/80 shadow-2xs transition-all cursor-pointer group"
+                title="Notifications Push de Garde en direct"
+              >
+                <BellRing className={`w-4 h-4 ${unreadNotifsCount > 0 ? 'text-amber-500 animate-bounce' : 'text-slate-600 group-hover:text-amber-600'}`} />
+                {unreadNotifsCount > 0 && (
+                  <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-amber-500 text-slate-950 font-black text-[9px] flex items-center justify-center shadow-xs">
+                    {unreadNotifsCount}
+                  </span>
+                )}
+              </button>
+            )}
+
             {/* PWA Install Button */}
             <PWAInstallButton variant="compact" />
 
@@ -166,7 +201,7 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => onOpenFeedback('FORM')}
                 className="hidden lg:flex items-center gap-2 bg-white/90 hover:bg-emerald-50/70 text-slate-700 hover:text-emerald-900 border border-slate-200/90 hover:border-emerald-300/80 rounded-2xl px-3.5 py-2 text-xs font-extrabold shadow-2xs transition-all cursor-pointer group"
               >
-                <TogoLionIcon className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
+                <MessageSquareHeart className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
                 <span>Donner mon avis</span>
               </button>
             )}
@@ -240,7 +275,7 @@ export const Header: React.FC<HeaderProps> = ({
                 className="hidden md:flex items-center gap-1.5 px-3.5 py-1.5 rounded-2xl bg-white/80 hover:bg-emerald-50 text-slate-700 hover:text-emerald-900 border border-slate-200/90 hover:border-emerald-300 text-xs font-extrabold transition-all shadow-2xs cursor-pointer mr-1.5"
                 title="Consulter le guide officiel et FAQ de votre espace"
               >
-                <TogoLionIcon className="w-4 h-4 text-emerald-600" />
+                <BookOpen className="w-4 h-4 text-emerald-600" />
                 <span>Guide & FAQ</span>
               </button>
             )}
@@ -415,7 +450,7 @@ export const Header: React.FC<HeaderProps> = ({
                         className="w-full flex items-center justify-between px-3 py-2 rounded-xl text-emerald-800 hover:bg-emerald-50 text-xs font-extrabold transition-colors cursor-pointer"
                       >
                         <span className="flex items-center gap-2">
-                          <TogoLionIcon className="w-4 h-4 text-emerald-600" />
+                          <BookOpen className="w-4 h-4 text-emerald-600" />
                           <span>Guide & FAQ de mon espace</span>
                         </span>
                       </button>

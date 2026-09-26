@@ -780,7 +780,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               </div>
             </div>
 
-            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-xs text-emerald-950 flex items-center justify-between gap-3">
+            <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3.5 text-xs text-emerald-950 space-y-2">
               <div className="flex items-center flex-wrap gap-2">
                 <strong>Bascule rapide au comptoir :</strong>
                 <span>Cliquez directement sur</span>
@@ -794,6 +794,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                   <span>En Rupture</span>
                 </span>
                 <span>dans le tableau ci-dessous pour changer la disponibilité instantanément.</span>
+              </div>
+              <div className="pt-2 border-t border-emerald-200/60 text-[11px] text-emerald-900 flex items-start gap-1.5">
+                <span className="font-bold shrink-0">ℹ️ Fourchettes & Protection de l'Officine :</span>
+                <span>Saisissez vos tarifs en toute tranquillité. L'application présente automatiquement une fourchette de prix aux citoyens et informe que les prix varient selon la forme galénique (sirop, comprimés, gélules), le laboratoire et le conditionnement, afin de valoriser chaque pharmacie.</span>
               </div>
             </div>
 

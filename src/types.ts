@@ -383,8 +383,8 @@ export interface AdBanner {
   placement: AdPlacement;
   imageUrl?: string;
   badgeText?: string;
-  callToAction: string;
-  targetUrl: string;
+  callToAction?: string;
+  targetUrl?: string;
   targetPhone?: string;
   targetWhatsapp?: string;
   status: AdStatus;
